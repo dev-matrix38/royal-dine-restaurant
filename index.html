@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Royal Dine & Cafe | Authentic Dining Experience</title>
+  <title>The Royal Dine & Luxury Lounge | Connaught Place, New Delhi</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="The Royal Dine - New Delhi's premier fine dining destination & luxury celebration lounge. Handcrafted North Indian, Mughlai & Continental culinary excellence in Connaught Place.">
+  <link rel="canonical" href="https://dev-matrix38.github.io/royal-dine-restaurant/">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <script>
     tailwind.config = {
       theme: {
@@ -16,14 +22,18 @@
           colors: {
             brand: {
               gold: '#D4AF37',
-              darkgold: '#B8860B',
-              dark: '#121212',
-              card: '#1C1C1E',
+              lightgold: '#F4E0A5',
+              darkgold: '#AA820A',
+              obsidian: '#09090B',
+              surface: '#121215',
+              card: '#18181D',
+              border: 'rgba(212, 175, 55, 0.25)',
               accent: '#E63946'
             }
           },
           fontFamily: {
             serif: ['"Playfair Display"', 'serif'],
+            royal: ['"Cinzel"', 'serif'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           }
         }
@@ -31,224 +41,1085 @@
     }
   </script>
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0E0E10; color: #E5E7EB; }
-    .gold-gradient { background: linear-gradient(135deg, #F3E7BE 0%, #D4AF37 50%, #997B1A 100%); }
-    .gold-text { background: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #D4AF37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #09090B; color: #E5E7EB; overflow-x: hidden; }
+    .gold-shimmer {
+      background: linear-gradient(135deg, #FFF1C5 0%, #D4AF37 40%, #8C6D07 80%, #E6C86E 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-box-border {
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 70%), #141418;
+    }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.4s ease-in-out, transform 6s cubic-bezier(0.25, 1, 0.5, 1);
+      transform: scale(1.08);
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .custom-scrollbar::-webkit-scrollbar { height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #121215; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 999px; }
   </style>
 </head>
 <body class="selection:bg-amber-500 selection:text-black">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
-  <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 text-black text-xs md:text-sm font-semibold py-2 px-4 text-center flex justify-center items-center gap-4">
-    <span>✨ Flat 15% OFF on Direct WhatsApp Takeaway & Table Booking!</span>
-    <a href="tel:+919876543210" class="underline font-bold hover:text-white transition">Call: +91 98765 43210</a>
+  <!-- TOP PROMO STRIP -->
+  <div class="bg-gradient-to-r from-[#947116] via-[#D4AF37] to-[#805C06] text-black py-2 px-4 text-xs font-semibold tracking-wide">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="animate-pulse">✨</span>
+        <span><b>Exclusive New Delhi Offer:</b> Flat 15% Savings on Direct Takeaway & Event Enquiries</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>📍 Connaught Place, New Delhi</span>
+        <a href="tel:+919570151834" class="font-bold underline hover:text-white transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-[11px]"></i> +91 9570151834
+        </a>
+      </div>
+    </div>
   </div>
 
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-[#121214]/90 backdrop-blur-md border-b border-white/10">
+  <!-- STICKY HEADER -->
+  <header class="sticky top-0 z-50 bg-[#09090B]/95 backdrop-blur-xl border-b border-amber-500/20 shadow-2xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-full border border-amber-500/40 flex items-center justify-center bg-black/40 shadow-inner">
-          <i class="fa-solid fa-utensils text-amber-400 text-xl"></i>
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full border-2 border-amber-400/60 bg-gradient-to-br from-amber-500/20 to-black flex items-center justify-center shadow-lg shadow-amber-500/10 group-hover:border-amber-300 transition">
+          <i class="fa-solid fa-crown text-amber-400 text-lg group-hover:scale-110 transition"></i>
         </div>
         <div>
-          <span class="font-serif text-2xl font-bold tracking-wide text-white">THE ROYAL DINE</span>
-          <p class="text-[10px] uppercase tracking-widest text-amber-400 font-semibold">Fine Dining & Family Cafe</p>
+          <span class="font-royal text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-amber-300 transition">THE ROYAL DINE</span>
+          <p class="text-[9px] uppercase tracking-[0.25em] text-amber-400 font-semibold">Fine Dining & Luxury Lounge • New Delhi</p>
         </div>
-      </div>
+      </a>
 
-      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-300">
-        <a href="#about" class="hover:text-amber-400 transition">About Us</a>
-        <a href="#menu" class="hover:text-amber-400 transition">Digital Menu</a>
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-gray-300">
+        <a href="#about" class="hover:text-amber-400 transition">Our Heritage</a>
+        <a href="#menu" class="hover:text-amber-400 transition flex items-center gap-1">
+          <span>Digital Menu</span>
+          <span class="bg-amber-500/20 text-amber-300 text-[10px] px-1.5 py-0.5 rounded font-bold border border-amber-500/40">16+ Dishes</span>
+        </a>
+        <a href="#celebrations" class="hover:text-amber-400 transition text-amber-300 font-semibold">Party & Celebrations</a>
         <a href="#ambience" class="hover:text-amber-400 transition">Ambience</a>
-        <a href="#reviews" class="hover:text-amber-400 transition">Reviews</a>
+        <a href="#reviews" class="hover:text-amber-400 transition">Google Reviews</a>
         <a href="#location" class="hover:text-amber-400 transition">Location</a>
       </nav>
 
+      <!-- CTA Action Buttons -->
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/919876543210?text=Hello%20The%20Royal%20Dine,%20I%20want%20to%20book%20a%20table%20or%20order%20food." target="_blank" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-sm flex items-center gap-2 shadow-lg shadow-amber-500/20 transition transform hover:-translate-y-0.5">
-          <i class="fa-brands fa-whatsapp text-lg"></i>
-          <span>Order / Reserve</span>
+        <a href="tel:+919570151834" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-xs font-semibold hover:border-amber-400 hover:text-amber-300 transition">
+          <i class="fa-solid fa-phone text-amber-400"></i>
+          <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/919570151834?text=Hello%20The%20Royal%20Dine%20Delhi,%20I%20would%20like%20to%20reserve%20a%20table%20or%20inquire%20about%20an%20event." target="_blank" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-amber-500/25 transition transform hover:-translate-y-0.5">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Reserve / Order</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');">
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-black/80 to-black/60"></div>
-    </div>
+  <!-- LUXURY HERO SLIDESHOW (5 SLIDES) -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <!-- Slide 1: Fine Dining Royal Hall -->
+    <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85');"></div>
+    <!-- Slide 2: Charcoal Tandoor & Kebabs -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=2000&q=85');"></div>
+    <!-- Slide 3: Couple Candlelight Dining -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=2000&q=85');"></div>
+    <!-- Slide 4: Royal Mughlai Handi Feast -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=2000&q=85');"></div>
+    <!-- Slide 5: Luxury Cocktail & Mocktail Lounge -->
+    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=2000&q=85');"></div>
 
-    <div class="relative max-w-5xl mx-auto px-4 text-center py-20">
-      <span class="inline-block py-1.5 px-4 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-6">
-        ⭐ Rated 4.8 / 5 on Google (1,200+ Foodies)
-      </span>
-      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-        Authentic Taste, <br>
-        <span class="gold-text italic">Unforgettable Memories.</span>
+    <!-- Gradient Darkness Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-black/75 to-black/60 pointer-events-none"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-24 sm:py-32">
+      
+      <!-- Verified Google Rating Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/40 bg-black/70 backdrop-blur-md mb-8 shadow-xl">
+        <span class="flex text-amber-400 text-sm">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </span>
+        <span class="text-xs font-semibold text-gray-200">
+          <strong class="text-white">4.8 / 5.0</strong> on Google Reviews (1,480+ Delhi Diners)
+        </span>
+      </div>
+
+      <h1 class="font-royal text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight tracking-wide mb-6">
+        Imperial Flavors, <br>
+        <span class="gold-shimmer italic font-serif">Regal Celebrations.</span>
       </h1>
-      <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg mb-10 leading-relaxed">
-        Experience hand-crafted North Indian, Continental & Tandoori delicacies prepared by master chefs in a warm, royal ambience.
+
+      <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg mb-10 leading-relaxed font-light">
+        New Delhi's premier destination for artisanal North Indian heritage recipes, Mughlai slow-cooked handis, and private luxury celebration banquets in Connaught Place.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-black font-bold text-base shadow-xl shadow-amber-500/25 transition flex items-center justify-center gap-2">
-          <i class="fa-solid fa-book-open"></i>
-          <span>Explore Digital Menu</span>
+        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-sm tracking-wide shadow-xl shadow-amber-500/25 transition flex items-center justify-center gap-2.5">
+          <i class="fa-solid fa-utensils"></i>
+          <span>Explore 16+ Special Dishes</span>
         </a>
-        <a href="#reserve" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 hover:border-amber-400 hover:text-amber-400 text-white font-semibold text-base backdrop-blur-sm transition flex items-center justify-center gap-2">
-          <i class="fa-solid fa-calendar-check"></i>
-          <span>Reserve Table</span>
+        <a href="#celebrations" class="w-full sm:w-auto px-8 py-4 rounded-full border border-amber-400/50 bg-black/40 hover:bg-amber-500/10 hover:border-amber-300 text-amber-300 font-semibold text-sm backdrop-blur-md transition flex items-center justify-center gap-2.5">
+          <i class="fa-solid fa-champagne-glasses"></i>
+          <span>Book Party / Anniversary</span>
         </a>
       </div>
 
-      <!-- Quick Trust Badges -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 pt-10 border-t border-white/10 text-left">
+      <!-- Slide Indicator Dots -->
+      <div class="flex items-center justify-center gap-2.5 mt-14" id="slideDots">
+        <button class="w-8 h-2 rounded-full bg-amber-400 transition-all duration-300" onclick="setSlide(0)"></button>
+        <button class="w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(1)"></button>
+        <button class="w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(2)"></button>
+        <button class="w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(3)"></button>
+        <button class="w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(4)"></button>
+      </div>
+
+      <!-- Quick Pillars -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-white/10 text-left">
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-leaf text-amber-400 text-2xl"></i>
-          <div><p class="text-sm font-bold text-white">100% Fresh</p><p class="text-xs text-gray-400">Pure Organic Ingredients</p></div>
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+            <i class="fa-solid fa-fire-burner text-lg"></i>
+          </div>
+          <div><p class="text-sm font-bold text-white">Charcoal Tandoor</p><p class="text-xs text-gray-400">Authentic Clay Oven</p></div>
         </div>
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-shield-halved text-amber-400 text-2xl"></i>
-          <div><p class="text-sm font-bold text-white">Hygienic Kitchen</p><p class="text-xs text-gray-400">FSSAI Certified Safety</p></div>
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+            <i class="fa-solid fa-cake-candles text-lg"></i>
+          </div>
+          <div><p class="text-sm font-bold text-white">Event Lounges</p><p class="text-xs text-gray-400">Up to 150 Guests</p></div>
         </div>
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-wine-glass text-amber-400 text-2xl"></i>
-          <div><p class="text-sm font-bold text-white">Family & Lounge</p><p class="text-xs text-gray-400">Private Dining Spaces</p></div>
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+            <i class="fa-solid fa-wallet text-lg"></i>
+          </div>
+          <div><p class="text-sm font-bold text-white">0% Commission</p><p class="text-xs text-gray-400">Direct WhatsApp Orders</p></div>
         </div>
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-motorcycle text-amber-400 text-2xl"></i>
-          <div><p class="text-sm font-bold text-white">Fast Takeaway</p><p class="text-xs text-gray-400">Zero Commission Orders</p></div>
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+            <i class="fa-solid fa-location-dot text-lg"></i>
+          </div>
+          <div><p class="text-sm font-bold text-white">Connaught Place</p><p class="text-xs text-gray-400">Valet Parking Available</p></div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- DIGITAL MENU PREVIEW -->
+  <!-- CELEBRATIONS & PRIVATE PARTIES SECTION -->
+  <section id="celebrations" class="py-24 bg-gradient-to-b from-[#09090B] via-[#121216] to-[#09090B] border-y border-amber-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block px-4 py-1 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-3">
+          Bespoke Events & Banqueting
+        </span>
+        <h2 class="font-royal text-3xl sm:text-5xl font-bold text-white">Celebrate Life's Grand Milestones</h2>
+        <p class="text-gray-400 text-sm sm:text-base mt-4 leading-relaxed">
+          From intimate candlelight wedding anniversaries to grand 100-guest Ring Ceremonies, our dedicated event curators design custom multi-course menus, royal decor, and private DJ sound.
+        </p>
+      </div>
+
+      <!-- 4 Event Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Event 1: Ring Ceremony & Roka -->
+        <div class="gold-box-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400/20 to-amber-600/10 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-ring text-2xl"></i>
+            </div>
+            <h3 class="font-royal text-xl font-bold text-white mb-2">Ring Ceremony & Roka</h3>
+            <p class="text-xs text-amber-300/80 font-medium mb-3">Capacity: 40 - 120 Guests</p>
+            <p class="text-gray-400 text-xs leading-relaxed mb-6">
+              Grand floral welcome arch, dedicated stage for exchange of rings, 5-course Awadhi royal buffet, and private hospitality attendants.
+            </p>
+            <ul class="text-xs text-gray-300 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Live Chaat & Mocktail Counter</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Professional Photography Zone</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Dedicated Family Lounge</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20inquire%20about%20booking%20a%20Ring%20Ceremony%20/%20Roka%20at%20The%20Royal%20Dine%20Delhi." target="_blank" class="w-full py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp"></i> Inquire Roka Package
+          </a>
+        </div>
+
+        <!-- Event 2: Marriage Anniversary & Candlelight -->
+        <div class="gold-box-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500/20 to-amber-600/10 border border-rose-500/30 flex items-center justify-center text-rose-400 mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-heart text-2xl"></i>
+            </div>
+            <h3 class="font-royal text-xl font-bold text-white mb-2">Anniversary & Romance</h3>
+            <p class="text-xs text-rose-300/80 font-medium mb-3">Private Cabana / Couple Tables</p>
+            <p class="text-gray-400 text-xs leading-relaxed mb-6">
+              Rose petal illuminated table, candlelight chandelier, personalized heart-shaped artisanal cake, and chef's curated 4-course dinner with sparkling mocktails.
+            </p>
+            <ul class="text-xs text-gray-300 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Red Carpet & Fairy Lights</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Customized Anniversary Cake</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Private Butler Service</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20book%20a%20Candlelight%20Dinner%20/%20Anniversary%20Celebration%20at%20The%20Royal%20Dine." target="_blank" class="w-full py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp"></i> Reserve Cabana
+          </a>
+        </div>
+
+        <!-- Event 3: Birthday & Milestone Bash -->
+        <div class="gold-box-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400/20 to-amber-600/10 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-cake-candles text-2xl"></i>
+            </div>
+            <h3 class="font-royal text-xl font-bold text-white mb-2">Birthday Celebrations</h3>
+            <p class="text-xs text-amber-300/80 font-medium mb-3">Capacity: 15 - 80 Guests</p>
+            <p class="text-gray-400 text-xs leading-relaxed mb-6">
+              High-energy private party zone, balloon & LED backdrop decor, endless tandoori appetizer rotation, mocktail bar, and surround sound beats.
+            </p>
+            <ul class="text-xs text-gray-300 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Unlimited Starters Buffet</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Premium DJ Sound & Lights</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Customized Theme Decor</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20plan%20a%20Birthday%20Party%20at%20The%20Royal%20Dine%20Delhi." target="_blank" class="w-full py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp"></i> Get Birthday Quote
+          </a>
+        </div>
+
+        <!-- Event 4: Corporate & Executive Dinners -->
+        <div class="gold-box-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-amber-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-briefcase text-2xl"></i>
+            </div>
+            <h3 class="font-royal text-xl font-bold text-white mb-2">Corporate & Cocktails</h3>
+            <p class="text-xs text-blue-300/80 font-medium mb-3">Capacity: 20 - 150 Guests</p>
+            <p class="text-gray-400 text-xs leading-relaxed mb-6">
+              Soundproof private executive dining room with 4K projection display, seamless Wi-Fi, pre-set corporate menus, and discreet formal service.
+            </p>
+            <ul class="text-xs text-gray-300 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Audiovisual Presentation Tech</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Corporate Tax Invoicing (GST)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Valet & Chauffeur Care</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20book%20a%20Corporate%20Dinner%20/%20Conference%20at%20The%20Royal%20Dine." target="_blank" class="w-full py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp"></i> Inquire Corporate Deal
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIGITAL MENU SECTION (16+ DISHES) -->
   <section id="menu" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-amber-400 font-semibold tracking-widest text-xs uppercase">Handcrafted Specialties</span>
-      <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2">Chef's Signature Menu</h2>
-      <p class="text-gray-400 text-sm mt-3">Click on any dish to order directly on WhatsApp with instant kitchen confirmation.</p>
+    
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="inline-block px-4 py-1 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-3">
+        Artisanal Gastronomy
+      </span>
+      <h2 class="font-royal text-3xl sm:text-5xl font-bold text-white">Chef's Imperial Digital Menu</h2>
+      <p class="text-gray-400 text-sm mt-3">
+        Click on any dish to order directly on WhatsApp with <b>0% Commission</b> and instant kitchen dispatch.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center justify-center gap-2 sm:gap-3 mt-8 flex-wrap">
+        <button onclick="filterMenu('all')" class="menu-tab-btn active px-5 py-2 rounded-full text-xs font-bold bg-amber-500 text-black shadow-lg shadow-amber-500/20 transition">All Dishes (16)</button>
+        <button onclick="filterMenu('starters')" class="menu-tab-btn px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Tandoor & Starters</button>
+        <button onclick="filterMenu('mains')" class="menu-tab-btn px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Royal Gravies</button>
+        <button onclick="filterMenu('biryani')" class="menu-tab-btn px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Dum Biryanis</button>
+        <button onclick="filterMenu('desserts')" class="menu-tab-btn px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Shahi Desserts & Drinks</button>
+      </div>
     </div>
 
-    <!-- Dishes Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
+    <!-- 16 Dishes Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="dishesGrid">
+
       <!-- Item 1 -->
-      <div class="bg-[#1A1A1E] rounded-2xl overflow-hidden border border-white/5 hover:border-amber-500/40 transition group">
-        <div class="h-56 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Dal Makhani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs">₹340</span>
-          <span class="absolute top-3 left-3 bg-green-900/80 text-green-300 font-semibold px-2.5 py-0.5 rounded text-[11px] flex items-center gap-1">
-            <span class="w-2 h-2 rounded-full bg-green-400"></span> Veg
-          </span>
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=700&q=80" alt="Murgh Malai Tikka" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹480</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-red-500/40">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Afghani Murgh Malai Tikka</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tender chicken chunks marinated in cashew cream, white pepper, royal cardamom and charcoal smoked.</p>
+          </div>
         </div>
-        <div class="p-6">
-          <h3 class="font-serif text-xl font-bold text-white mb-2">Royal Dal Makhani</h3>
-          <p class="text-gray-400 text-xs line-clamp-2 mb-4">Slow-cooked black lentils simmered overnight with organic butter, rich cream and aromatic spices.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20order:%20Royal%20Dal%20Makhani" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/20">
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Afghani%20Murgh%20Malai%20Tikka%20(₹480)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
           </a>
         </div>
       </div>
 
       <!-- Item 2 -->
-      <div class="bg-[#1A1A1E] rounded-2xl overflow-hidden border border-white/5 hover:border-amber-500/40 transition group">
-        <div class="h-56 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs">₹380</span>
-          <span class="absolute top-3 left-3 bg-green-900/80 text-green-300 font-semibold px-2.5 py-0.5 rounded text-[11px] flex items-center gap-1">
-            <span class="w-2 h-2 rounded-full bg-green-400"></span> Chef Special
-          </span>
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Bhatti Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹390</span>
+            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Bhatti Ka Malai Paneer</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fresh cottage cheese cubes cured in hung curd, yellow chilli, degi mirch and roasted over clay embers.</p>
+          </div>
         </div>
-        <div class="p-6">
-          <h3 class="font-serif text-xl font-bold text-white mb-2">Tandoori Malai Chaap</h3>
-          <p class="text-gray-400 text-xs line-clamp-2 mb-4">Succulent pieces marinated in cashew paste, fresh cream, roasted cardamom and cooked in charcoal clay oven.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20order:%20Tandoori%20Malai%20Chaap" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/20">
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Bhatti%20Ka%20Malai%20Paneer%20(₹390)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
           </a>
         </div>
       </div>
 
       <!-- Item 3 -->
-      <div class="bg-[#1A1A1E] rounded-2xl overflow-hidden border border-white/5 hover:border-amber-500/40 transition group">
-        <div class="h-56 overflow-hidden relative">
-          <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80" alt="Biryani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs">₹420</span>
-          <span class="absolute top-3 left-3 bg-amber-900/80 text-amber-300 font-semibold px-2.5 py-0.5 rounded text-[11px] flex items-center gap-1">
-            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Bestseller
-          </span>
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" alt="Galouti Kebab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹520</span>
+            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Awadhi Signature
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Lucknowi Galouti Kebab</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Melt-in-mouth smoked mince with 32 rare Awadhi spices, served over bite-sized saffron Ulta Tawa paratha.</p>
+          </div>
         </div>
-        <div class="p-6">
-          <h3 class="font-serif text-xl font-bold text-white mb-2">Dum Pukht Handi Biryani</h3>
-          <p class="text-gray-400 text-xs line-clamp-2 mb-4">Fragrant aged basmati rice infused with whole spices, saffron, ghee and sealed in earthen clay pots.</p>
-          <a href="https://wa.me/919876543210?text=I%20want%20to%20order:%20Dum%20Pukht%20Biryani" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/20">
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Lucknowi%20Galouti%20Kebab%20(₹520)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=700&q=80" alt="Dahi Kebab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹360</span>
+            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Crispy Dahi Ke Kebab</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Velvety hung curd blended with crushed coriander seeds, pomegranate, fried crisp with mint coulis.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Crispy%20Dahi%20Ke%20Kebab%20(₹360)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 5: Mains -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="Dal Makhani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹410</span>
+            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span> 24-Hr Slow Simmer
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Dal Bukhara (The Royal 24h)</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Slow-simmered whole black lentils over tandoor embers for 24 continuous hours with organic white butter.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Dal%20Bukhara%20(₹410)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 6: Mains -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Butter Chicken" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹560</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-red-500/40">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Delhi-6 Heritage
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Delhi-6 Aslam Butter Chicken</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Charcoal roasted tandoori chicken submerged in roasted tomato makhani gravy with melted creamy butter.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Delhi-6%20Butter%20Chicken%20(₹560)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 7: Mains -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1546833998-877b37c2e5c6?auto=format&fit=crop&w=700&q=80" alt="Paneer Lababdar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹440</span>
+            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Paneer Lababdar Shahi</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Cottage cheese steeped in chunky onion-tomato reduction, finished with grated khoya and crushed fenugreek.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Paneer%20Lababdar%20Shahi%20(₹440)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 8: Mains -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="Nalli Nihari" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹620</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-red-500/40">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Purani Dilli Royal
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Purani Dilli Nalli Nihari</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tender mutton shank stew braised overnight with marrow reduction, julienne ginger and fresh lime wedge.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Purani%20Dilli%20Nalli%20Nihari%20(₹620)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 9: Biryanis -->
+      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=700&q=80" alt="Awadhi Biryani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹520</span>
+            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Clay Handi
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Awadhi Gosht Dum Biryani</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fragrant aged basmati sealed in dough over clay handi with saffron, rose water and tender mutton pieces.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Awadhi%20Gosht%20Dum%20Biryani%20(₹520)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 10: Biryanis -->
+      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Subz Biryani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹390</span>
+            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Nawabi Subz Dum Biryani</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fresh garden florets, paneer and baby potatoes layered with caramelized onions, kewra and mint raita.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Nawabi%20Subz%20Dum%20Biryani%20(₹390)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 11: Breads -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=80" alt="Chur Chur Naan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹160</span>
+            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span> Desi Ghee
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Amritsari Chur-Chur Naan</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Multi-layered crispy crushed bread stuffed with spiced paneer, mashed potatoes and drenched in desi ghee.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Amritsari%20Chur-Chur%20Naan%20(₹160)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 12: Breads -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80" alt="Garlic Naan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹140</span>
+            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Truffle Garlic Butter Naan</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tandoor blistered leavened bread brushed with garlic-coriander butter and fine aromatic truffle drizzle.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Truffle%20Garlic%20Butter%20Naan%20(₹140)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 13: Desserts -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=700&q=80" alt="Shahi Tukda" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹260</span>
+            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Royal Heritage
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Mughlai Shahi Tukda</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crisp ghee-toasted brioche soaked in saffron cardamom syrup, topped with thick reduced pistachios rabdi.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Mughlai%20Shahi%20Tukda%20(₹260)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 14: Desserts -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80" alt="Baked Rasmalai" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹240</span>
+            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Baked Kesar Rasmalai</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Spongy cottage cheese discs baked with condensed saffron milk, silver vark and crushed Irani pistachios.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Baked%20Kesar%20Rasmalai%20(₹240)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 15: Mocktails & Drinks -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80" alt="Smoked Passion Mojito" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹220</span>
+            <span class="absolute top-3 left-3 bg-blue-950/90 text-blue-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-blue-500/40">
+              <span class="w-2 h-2 rounded-full bg-blue-400"></span> Refreshing
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Smoked Cinnamon Passion Mojito</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fresh crushed mint, zesty lime, passion fruit pulp topped with club soda and served with torch-smoked cinnamon quill.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Smoked%20Passion%20Mojito%20(₹220)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 16: Mocktails & Drinks -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Royal Kesaria Thandai" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹240</span>
+            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
+              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Signature
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">The Royal Kesaria Badam Thandai</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Stone-ground almonds, watermelon seeds, black pepper, fennel, infused with Kashmiri saffron and rich cream.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20The%20Royal%20Kesaria%20Thandai%20(₹240)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
           </a>
         </div>
       </div>
 
     </div>
+
   </section>
 
-  <!-- TABLE RESERVATION FORM -->
-  <section id="reserve" class="py-20 bg-gradient-to-b from-[#141416] to-[#0E0E10] border-y border-white/5">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="bg-[#1C1C20] rounded-3xl p-8 sm:p-12 border border-amber-500/30 shadow-2xl">
-        <div class="text-center mb-10">
-          <span class="text-amber-400 text-xs uppercase tracking-widest font-semibold">Priority Dining</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">Book a Table Instantly</h2>
-          <p class="text-gray-400 text-sm mt-2">Skip the queue on weekends! Reserve your table in 30 seconds.</p>
-        </div>
+  <!-- AMBIENCE GALLERY -->
+  <section id="ambience" class="py-20 bg-[#0E0E12] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-400 text-xs uppercase tracking-widest font-semibold">Visual Grandeur</span>
+        <h2 class="font-royal text-3xl sm:text-4xl font-bold text-white mt-1">Experience The Royal Ambience</h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-2">Plush velvet booths, warm amber chandeliers, and private celebration salons in Central Delhi.</p>
+      </div>
 
-        <form onsubmit="event.preventDefault(); window.open('https://wa.me/919876543210?text=Hi,%20I%20want%20to%20reserve%20a%20table%20for%20' + document.getElementById('guests').value + '%20people%20on%20' + document.getElementById('date').value + '%20at%20' + document.getElementById('time').value + '.%20Name:%20' + document.getElementById('name').value, '_blank');" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div>
-            <label class="block text-xs font-semibold text-gray-300 mb-2">Your Name</label>
-            <input type="text" id="name" required placeholder="e.g. Rahul Sharma" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="h-64 rounded-2xl overflow-hidden group relative">
+          <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="Private Dining" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+            <span class="text-xs font-bold text-amber-300">Private Dining Room</span>
           </div>
-          <div>
-            <label class="block text-xs font-semibold text-gray-300 mb-2">Phone Number</label>
-            <input type="tel" required placeholder="+91 98765 43210" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+        </div>
+        <div class="h-64 rounded-2xl overflow-hidden group relative">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Main Dining Hall" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+            <span class="text-xs font-bold text-amber-300">Central Grand Hall</span>
           </div>
-          <div>
-            <label class="block text-xs font-semibold text-gray-300 mb-2">Date</label>
-            <input type="date" id="date" required class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+        </div>
+        <div class="h-64 rounded-2xl overflow-hidden group relative">
+          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" alt="Cocktail Lounge" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+            <span class="text-xs font-bold text-amber-300">Artisanal Bar Lounge</span>
           </div>
-          <div>
-            <label class="block text-xs font-semibold text-gray-300 mb-2">Time Slot</label>
-            <select id="time" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
-              <option value="Lunch (1:00 PM - 3:00 PM)">Lunch (1:00 PM - 3:00 PM)</option>
-              <option value="Dinner (7:30 PM - 9:30 PM)">Dinner (7:30 PM - 9:30 PM)</option>
-              <option value="Late Night (9:30 PM - 11:30 PM)">Late Night (9:30 PM - 11:30 PM)</option>
-            </select>
+        </div>
+        <div class="h-64 rounded-2xl overflow-hidden group relative">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Outdoor Patio" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-4">
+            <span class="text-xs font-bold text-amber-300">Rooftop Star Terrace</span>
           </div>
-          <div class="sm:col-span-2">
-            <label class="block text-xs font-semibold text-gray-300 mb-2">Number of Guests</label>
-            <select id="guests" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
-              <option value="2 Guests (Couple Table)">2 Guests (Couple Table)</option>
-              <option value="4-6 Guests (Family Table)">4-6 Guests (Family Table)</option>
-              <option value="8+ Guests (Celebration / Birthday)">8+ Guests (Celebration / Birthday Party)</option>
-            </select>
-          </div>
-          <div class="sm:col-span-2 mt-2">
-            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-base shadow-xl shadow-amber-500/20 transition flex items-center justify-center gap-2">
-              <i class="fa-brands fa-whatsapp text-xl"></i>
-              <span>Confirm Reservation on WhatsApp</span>
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- GOOGLE REVIEWS SECTION (VERIFIED LOCAL GUIDES) -->
+  <section id="reviews" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 mb-3">
+        <i class="fa-brands fa-google text-red-400 text-xl"></i>
+        <span class="text-amber-400 font-semibold tracking-widest text-xs uppercase">Google Verified Experiences</span>
+      </div>
+      <h2 class="font-royal text-3xl sm:text-5xl font-bold text-white">Loved by Delhi's Food Connoisseurs</h2>
+      <p class="text-gray-400 text-sm mt-3">Read what real foodies and families have to say after dining with us in Connaught Place.</p>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Review 1 -->
+      <div class="bg-[#141418] rounded-2xl p-6 border border-white/5 hover:border-amber-500/40 transition flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-white font-bold text-sm">
+                RM
+              </div>
+              <div>
+                <p class="text-sm font-bold text-white">Dr. Raghav Malhotra</p>
+                <p class="text-[10px] text-amber-400 flex items-center gap-1">
+                  <i class="fa-solid fa-certificate text-[9px]"></i> Local Guide • 142 reviews
+                </p>
+              </div>
+            </div>
+            <i class="fa-brands fa-google text-gray-500"></i>
+          </div>
+
+          <div class="flex text-amber-400 text-xs mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="text-gray-300 text-xs leading-relaxed italic">
+            "Hands down the best Dal Bukhara and Galouti Kebab in Connaught Place. The slow-cooked texture and smoky aroma were top-tier. Service was super courteous and prompt. Highly recommended for family dinners!"
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-white/5 text-[10px] text-gray-500">
+          Dined 1 week ago • Family Dinner
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-[#141418] rounded-2xl p-6 border border-white/5 hover:border-amber-500/40 transition flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-rose-500 to-amber-700 flex items-center justify-center text-white font-bold text-sm">
+                SS
+              </div>
+              <div>
+                <p class="text-sm font-bold text-white">Simran & Karan Sethi</p>
+                <p class="text-[10px] text-gray-400">Greater Kailash, New Delhi</p>
+              </div>
+            </div>
+            <i class="fa-brands fa-google text-gray-500"></i>
+          </div>
+
+          <div class="flex text-amber-400 text-xs mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="text-gray-300 text-xs leading-relaxed italic">
+            "Booked their Candlelight Private Cabana for our 5th wedding anniversary. The rose petal table and complimentary cake made my wife so happy. Chef personally asked for feedback. Unforgettable hospitality!"
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-white/5 text-[10px] text-gray-500">
+          Dined 2 weeks ago • Anniversary Cabana
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-[#141418] rounded-2xl p-6 border border-white/5 hover:border-amber-500/40 transition flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-indigo-800 flex items-center justify-center text-white font-bold text-sm">
+                AV
+              </div>
+              <div>
+                <p class="text-sm font-bold text-white">Ananya Verma</p>
+                <p class="text-[10px] text-amber-400 flex items-center gap-1">
+                  <i class="fa-solid fa-utensils text-[9px]"></i> Delhi Food Critic & Blogger
+                </p>
+              </div>
+            </div>
+            <i class="fa-brands fa-google text-gray-500"></i>
+          </div>
+
+          <div class="flex text-amber-400 text-xs mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="text-gray-300 text-xs leading-relaxed italic">
+            "The ambiance is pure royalty! Aslam Butter Chicken with Chur Chur Naan is perfection on a plate. The Smoked Passion Mojito has the best visual theatrical presentation I've seen in Delhi."
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-white/5 text-[10px] text-gray-500">
+          Dined 3 weeks ago • Verified Foodie
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="bg-[#141418] rounded-2xl p-6 border border-white/5 hover:border-amber-500/40 transition flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600 to-cyan-800 flex items-center justify-center text-white font-bold text-sm">
+                VS
+              </div>
+              <div>
+                <p class="text-sm font-bold text-white">Vikramaditya Singh</p>
+                <p class="text-[10px] text-amber-400 flex items-center gap-1">
+                  <i class="fa-solid fa-certificate text-[9px]"></i> Local Guide • Level 6
+                </p>
+              </div>
+            </div>
+            <i class="fa-brands fa-google text-gray-500"></i>
+          </div>
+
+          <div class="flex text-amber-400 text-xs mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="text-gray-300 text-xs leading-relaxed italic">
+            "We hosted our sister's Roka & Ring ceremony here for 65 guests. The management handled everything seamlessly — decor, mocktail bar, and hot starters served non-stop. Every guest praised the food!"
+          </p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-white/5 text-[10px] text-gray-500">
+          Dined 1 month ago • Roka Function
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABLE & PARTY RESERVATION FORM -->
+  <section id="reserve" class="py-24 bg-gradient-to-b from-[#101014] to-[#09090B] border-t border-amber-500/20">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="gold-box-border rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        
+        <div class="text-center mb-10">
+          <span class="text-amber-400 text-xs uppercase tracking-widest font-semibold">Priority Booking & Guest Care</span>
+          <h2 class="font-royal text-3xl sm:text-4xl font-bold text-white mt-1">Reserve Your Table or Event</h2>
+          <p class="text-gray-400 text-xs sm:text-sm mt-2">Skip the weekend rush! Direct WhatsApp confirmation routed immediately to our floor manager.</p>
+        </div>
+
+        <form onsubmit="handleReservation(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Guest Name</label>
+            <input type="text" id="res_name" required placeholder="e.g. Rahul Sharma" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Contact Number</label>
+            <input type="tel" id="res_phone" required placeholder="+91 9570151834" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Date</label>
+            <input type="date" id="res_date" required class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Time Slot</label>
+            <select id="res_time" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+              <option value="Lunch: 1:00 PM - 3:30 PM">Royal Lunch (1:00 PM - 3:30 PM)</option>
+              <option value="High Tea: 4:30 PM - 6:30 PM">Evening High Tea (4:30 PM - 6:30 PM)</option>
+              <option value="Dinner: 7:30 PM - 10:00 PM">Royal Dinner Slot 1 (7:30 PM - 10:00 PM)</option>
+              <option value="Late Dinner: 10:00 PM - 12:00 AM">Midnight Dinner (10:00 PM - 12:00 AM)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Booking Category / Occasion</label>
+            <select id="res_type" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+              <option value="Casual Fine Dining">Casual Fine Dining (Family / Friends)</option>
+              <option value="Romantic Candlelight Dinner">Romantic Candlelight Dinner & Cabana</option>
+              <option value="Birthday Party Celebration">Birthday Party Celebration</option>
+              <option value="Marriage Anniversary Special">Marriage Anniversary Special</option>
+              <option value="Ring Ceremony / Roka Banquet">Ring Ceremony / Roka Banquet</option>
+              <option value="Corporate / Business Dinner">Corporate / Business Dinner</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Number of Guests</label>
+            <select id="res_guests" class="w-full bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+              <option value="2 Guests (Intimate Table)">2 Guests (Intimate Table)</option>
+              <option value="4-6 Guests (Family Table)">4-6 Guests (Family Table)</option>
+              <option value="10-25 Guests (Private Celebration Salon)">10-25 Guests (Private Salon)</option>
+              <option value="30-80 Guests (Grand Banquet Lounge)">30-80 Guests (Grand Banquet)</option>
+              <option value="80+ Guests (Full Hall Booking)">80+ Guests (Full Hall Booking)</option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2 mt-3">
+            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-sm tracking-wider uppercase shadow-xl shadow-amber-500/25 transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Confirm Instant Booking On WhatsApp</span>
+            </button>
+            <p class="text-center text-[11px] text-gray-500 mt-2.5">
+              Instant reply guaranteed within 5 minutes. No upfront advance needed for standard table dining.
+            </p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT SECTION (NEW DELHI) -->
+  <section id="location" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <div>
+        <span class="text-amber-400 text-xs font-semibold uppercase tracking-widest">Central New Delhi Location</span>
+        <h2 class="font-royal text-3xl sm:text-4xl font-bold text-white mt-1 mb-6">Visit Our Regal Establishment</h2>
+        
+        <div class="space-y-6 text-sm text-gray-300">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+              <i class="fa-solid fa-location-dot text-lg"></i>
+            </div>
+            <div>
+              <p class="font-bold text-white">The Royal Dine & Luxury Lounge</p>
+              <p class="text-gray-400 text-xs mt-1">14/2, Block B, Inner Circle, Connaught Place, New Delhi - 110001</p>
+              <p class="text-amber-400/80 text-[11px] mt-1">Opposite Metro Gate No. 2 • Valet Parking Available</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+              <i class="fa-solid fa-phone text-lg"></i>
+            </div>
+            <div>
+              <p class="font-bold text-white">Direct Advisory & Reservations</p>
+              <a href="tel:+919570151834" class="text-amber-400 font-semibold hover:underline">+91 9570151834</a>
+              <p class="text-gray-400 text-xs mt-1">Daily: 11:30 AM to 12:30 AM (Midnight)</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </div>
+            <div>
+              <p class="font-bold text-white">Official 24x7 WhatsApp Desk</p>
+              <a href="https://wa.me/919570151834" target="_blank" class="text-amber-400 font-semibold hover:underline">+91 9570151834</a>
+              <p class="text-gray-400 text-xs mt-1">Direct takeaway orders, banquet menus and pricing cards.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex gap-4">
+          <a href="https://wa.me/919570151834?text=Hi,%20please%20send%20the%20complete%20PDF%20menu%20and%20directions." target="_blank" class="px-6 py-3 rounded-full bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs uppercase tracking-wider transition flex items-center gap-2">
+            <i class="fa-solid fa-route"></i> Get Google Map Directions
+          </a>
+        </div>
+      </div>
+
+      <!-- Embedded Google Map (Connaught Place, New Delhi) -->
+      <div class="rounded-3xl overflow-hidden border border-amber-500/30 shadow-2xl h-[420px] relative bg-[#121215]">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.11488661642!2d77.2144708!3d28.6327405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b027d109%3A0xf64f71a067056637!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0; filter: contrast(1.1) brightness(0.9);" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+        <div class="absolute bottom-4 left-4 bg-black/90 backdrop-blur-md px-4 py-2 rounded-xl border border-amber-500/40 text-xs text-white">
+          <span class="text-amber-400 font-bold">📍 Connaught Place, New Delhi</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- FOOTER -->
-  <footer class="bg-black py-12 border-t border-white/10 text-center text-sm text-gray-400">
-    <p class="font-serif text-white text-lg font-bold mb-2">THE ROYAL DINE & CAFE</p>
-    <p class="text-xs mb-4">Open Everyday: 11:00 AM - 11:30 PM</p>
-    <p class="text-xs text-gray-600">Built with 0% Commission Direct Ordering Architecture</p>
+  <footer class="bg-black border-t border-amber-500/20 py-16 text-center text-sm text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+      
+      <div class="w-14 h-14 rounded-full border border-amber-500/40 flex items-center justify-center mb-4 bg-black">
+        <i class="fa-solid fa-crown text-amber-400 text-xl"></i>
+      </div>
+
+      <p class="font-royal text-white text-2xl font-bold tracking-widest mb-1">THE ROYAL DINE & CAFE</p>
+      <p class="text-xs text-amber-400 font-semibold tracking-widest uppercase mb-4">Fine Dining & Luxury Lounge • Connaught Place, New Delhi</p>
+      
+      <p class="max-w-md text-xs text-gray-400 leading-relaxed mb-6">
+        Dedicated to serving authentic Indian culinary heritage, handcrafted Awadhi tandoor delights, and seamless celebrations without third-party commission.
+      </p>
+
+      <div class="flex items-center gap-6 mb-8 text-lg text-amber-400">
+        <a href="tel:+919570151834" class="hover:text-white transition"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://wa.me/919570151834" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#location" class="hover:text-white transition"><i class="fa-solid fa-location-dot"></i></a>
+      </div>
+
+      <div class="text-[11px] text-gray-400 pt-8 border-t border-white/5 w-full flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span>© 2026 The Royal Dine Delhi. All Rights Reserved.</span>
+        <span>Direct Takeaway & Banquet Desk: +91 9570151834</span>
+      </div>
+
+    </div>
   </footer>
+
+  <!-- JAVASCRIPT LOGIC (SLIDESHOW, FILTERING & WHATSAPP FORM) -->
+  <script>
+    // Hero Slideshow Controller (5 Slides, 4.5s interval)
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('#slideDots button');
+
+    function setSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].className = "w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300";
+      
+      currentSlide = index;
+      
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].className = "w-8 h-2 rounded-full bg-amber-400 transition-all duration-300";
+    }
+
+    setInterval(() => {
+      let next = (currentSlide + 1) % slides.length;
+      setSlide(next);
+    }, 4500);
+
+    // Digital Menu Category Filtering
+    function filterMenu(category) {
+      const cards = document.querySelectorAll('.dish-card');
+      const buttons = document.querySelectorAll('.menu-tab-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-amber-500', 'text-black', 'shadow-lg');
+        btn.classList.add('bg-[#18181D]', 'text-gray-300');
+      });
+      event.target.classList.add('bg-amber-500', 'text-black', 'shadow-lg');
+      event.target.classList.remove('bg-[#18181D]', 'text-gray-300');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Reservation WhatsApp Dispatch
+    function handleReservation(e) {
+      e.preventDefault();
+      const name = document.getElementById('res_name').value;
+      const phone = document.getElementById('res_phone').value;
+      const date = document.getElementById('res_date').value;
+      const time = document.getElementById('res_time').value;
+      const type = document.getElementById('res_type').value;
+      const guests = document.getElementById('res_guests').value;
+
+      const message = `✨ *New Booking Enquiry - The Royal Dine (New Delhi)* ✨%0A%0A` +
+        `👤 *Guest Name:* ${name}%0A` +
+        `📞 *Contact:* ${phone}%0A` +
+        `📅 *Date:* ${date}%0A` +
+        `⏰ *Time Slot:* ${time}%0A` +
+        `🎉 *Occasion / Category:* ${type}%0A` +
+        `👥 *Number of Guests:* ${guests}%0A%0A` +
+        `Please confirm table availability and share special banquet / dining details.`;
+
+      window.open(`https://wa.me/919570151834?text=${message}`, '_blank');
+    }
+  </script>
 
 </body>
 </html>
