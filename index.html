@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Royal Dine & Cafe | Authentic Dining Experience</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              darkgold: '#B8860B',
+              dark: '#121212',
+              card: '#1C1C1E',
+              accent: '#E63946'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0E0E10; color: #E5E7EB; }
+    .gold-gradient { background: linear-gradient(135deg, #F3E7BE 0%, #D4AF37 50%, #997B1A 100%); }
+    .gold-text { background: linear-gradient(135deg, #F9D976 0%, #E9B642 50%, #D4AF37 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  </style>
+</head>
+<body class="selection:bg-amber-500 selection:text-black">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 text-black text-xs md:text-sm font-semibold py-2 px-4 text-center flex justify-center items-center gap-4">
+    <span>✨ Flat 15% OFF on Direct WhatsApp Takeaway & Table Booking!</span>
+    <a href="tel:+919876543210" class="underline font-bold hover:text-white transition">Call: +91 98765 43210</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#121214]/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full border border-amber-500/40 flex items-center justify-center bg-black/40 shadow-inner">
+          <i class="fa-solid fa-utensils text-amber-400 text-xl"></i>
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-wide text-white">THE ROYAL DINE</span>
+          <p class="text-[10px] uppercase tracking-widest text-amber-400 font-semibold">Fine Dining & Family Cafe</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-300">
+        <a href="#about" class="hover:text-amber-400 transition">About Us</a>
+        <a href="#menu" class="hover:text-amber-400 transition">Digital Menu</a>
+        <a href="#ambience" class="hover:text-amber-400 transition">Ambience</a>
+        <a href="#reviews" class="hover:text-amber-400 transition">Reviews</a>
+        <a href="#location" class="hover:text-amber-400 transition">Location</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/919876543210?text=Hello%20The%20Royal%20Dine,%20I%20want%20to%20book%20a%20table%20or%20order%20food." target="_blank" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-sm flex items-center gap-2 shadow-lg shadow-amber-500/20 transition transform hover:-translate-y-0.5">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Order / Reserve</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0E0E10] via-black/80 to-black/60"></div>
+    </div>
+
+    <div class="relative max-w-5xl mx-auto px-4 text-center py-20">
+      <span class="inline-block py-1.5 px-4 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-6">
+        ⭐ Rated 4.8 / 5 on Google (1,200+ Foodies)
+      </span>
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+        Authentic Taste, <br>
+        <span class="gold-text italic">Unforgettable Memories.</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg mb-10 leading-relaxed">
+        Experience hand-crafted North Indian, Continental & Tandoori delicacies prepared by master chefs in a warm, royal ambience.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-amber-500 hover:bg-amber-400 text-black font-bold text-base shadow-xl shadow-amber-500/25 transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Explore Digital Menu</span>
+        </a>
+        <a href="#reserve" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 hover:border-amber-400 hover:text-amber-400 text-white font-semibold text-base backdrop-blur-sm transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Reserve Table</span>
+        </a>
+      </div>
+
+      <!-- Quick Trust Badges -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16 pt-10 border-t border-white/10 text-left">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-leaf text-amber-400 text-2xl"></i>
+          <div><p class="text-sm font-bold text-white">100% Fresh</p><p class="text-xs text-gray-400">Pure Organic Ingredients</p></div>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-amber-400 text-2xl"></i>
+          <div><p class="text-sm font-bold text-white">Hygienic Kitchen</p><p class="text-xs text-gray-400">FSSAI Certified Safety</p></div>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-wine-glass text-amber-400 text-2xl"></i>
+          <div><p class="text-sm font-bold text-white">Family & Lounge</p><p class="text-xs text-gray-400">Private Dining Spaces</p></div>
+        </div>
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-motorcycle text-amber-400 text-2xl"></i>
+          <div><p class="text-sm font-bold text-white">Fast Takeaway</p><p class="text-xs text-gray-400">Zero Commission Orders</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGITAL MENU PREVIEW -->
+  <section id="menu" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-amber-400 font-semibold tracking-widest text-xs uppercase">Handcrafted Specialties</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white mt-2">Chef's Signature Menu</h2>
+      <p class="text-gray-400 text-sm mt-3">Click on any dish to order directly on WhatsApp with instant kitchen confirmation.</p>
+    </div>
+
+    <!-- Dishes Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Item 1 -->
+      <div class="bg-[#1A1A1E] rounded-2xl overflow-hidden border border-white/5 hover:border-amber-500/40 transition group">
+        <div class="h-56 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Dal Makhani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs">₹340</span>
+          <span class="absolute top-3 left-3 bg-green-900/80 text-green-300 font-semibold px-2.5 py-0.5 rounded text-[11px] flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-green-400"></span> Veg
+          </span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold text-white mb-2">Royal Dal Makhani</h3>
+          <p class="text-gray-400 text-xs line-clamp-2 mb-4">Slow-cooked black lentils simmered overnight with organic butter, rich cream and aromatic spices.</p>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20order:%20Royal%20Dal%20Makhani" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/20">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-[#1A1A1E] rounded-2xl overflow-hidden border border-white/5 hover:border-amber-500/40 transition group">
+        <div class="h-56 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs">₹380</span>
+          <span class="absolute top-3 left-3 bg-green-900/80 text-green-300 font-semibold px-2.5 py-0.5 rounded text-[11px] flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-green-400"></span> Chef Special
+          </span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold text-white mb-2">Tandoori Malai Chaap</h3>
+          <p class="text-gray-400 text-xs line-clamp-2 mb-4">Succulent pieces marinated in cashew paste, fresh cream, roasted cardamom and cooked in charcoal clay oven.</p>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20order:%20Tandoori%20Malai%20Chaap" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/20">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-[#1A1A1E] rounded-2xl overflow-hidden border border-white/5 hover:border-amber-500/40 transition group">
+        <div class="h-56 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=800&q=80" alt="Biryani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs">₹420</span>
+          <span class="absolute top-3 left-3 bg-amber-900/80 text-amber-300 font-semibold px-2.5 py-0.5 rounded text-[11px] flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Bestseller
+          </span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-serif text-xl font-bold text-white mb-2">Dum Pukht Handi Biryani</h3>
+          <p class="text-gray-400 text-xs line-clamp-2 mb-4">Fragrant aged basmati rice infused with whole spices, saffron, ghee and sealed in earthen clay pots.</p>
+          <a href="https://wa.me/919876543210?text=I%20want%20to%20order:%20Dum%20Pukht%20Biryani" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/20">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order on WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABLE RESERVATION FORM -->
+  <section id="reserve" class="py-20 bg-gradient-to-b from-[#141416] to-[#0E0E10] border-y border-white/5">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-[#1C1C20] rounded-3xl p-8 sm:p-12 border border-amber-500/30 shadow-2xl">
+        <div class="text-center mb-10">
+          <span class="text-amber-400 text-xs uppercase tracking-widest font-semibold">Priority Dining</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">Book a Table Instantly</h2>
+          <p class="text-gray-400 text-sm mt-2">Skip the queue on weekends! Reserve your table in 30 seconds.</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); window.open('https://wa.me/919876543210?text=Hi,%20I%20want%20to%20reserve%20a%20table%20for%20' + document.getElementById('guests').value + '%20people%20on%20' + document.getElementById('date').value + '%20at%20' + document.getElementById('time').value + '.%20Name:%20' + document.getElementById('name').value, '_blank');" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Your Name</label>
+            <input type="text" id="name" required placeholder="e.g. Rahul Sharma" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Phone Number</label>
+            <input type="tel" required placeholder="+91 98765 43210" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Date</label>
+            <input type="date" id="date" required class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Time Slot</label>
+            <select id="time" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+              <option value="Lunch (1:00 PM - 3:00 PM)">Lunch (1:00 PM - 3:00 PM)</option>
+              <option value="Dinner (7:30 PM - 9:30 PM)">Dinner (7:30 PM - 9:30 PM)</option>
+              <option value="Late Night (9:30 PM - 11:30 PM)">Late Night (9:30 PM - 11:30 PM)</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-semibold text-gray-300 mb-2">Number of Guests</label>
+            <select id="guests" class="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400">
+              <option value="2 Guests (Couple Table)">2 Guests (Couple Table)</option>
+              <option value="4-6 Guests (Family Table)">4-6 Guests (Family Table)</option>
+              <option value="8+ Guests (Celebration / Birthday)">8+ Guests (Celebration / Birthday Party)</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2 mt-2">
+            <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-base shadow-xl shadow-amber-500/20 transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Confirm Reservation on WhatsApp</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-12 border-t border-white/10 text-center text-sm text-gray-400">
+    <p class="font-serif text-white text-lg font-bold mb-2">THE ROYAL DINE & CAFE</p>
+    <p class="text-xs mb-4">Open Everyday: 11:00 AM - 11:30 PM</p>
+    <p class="text-xs text-gray-600">Built with 0% Commission Direct Ordering Architecture</p>
+  </footer>
+
+</body>
+</html>
