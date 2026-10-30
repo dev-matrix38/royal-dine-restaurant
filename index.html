@@ -41,7 +41,8 @@
     }
   </script>
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #09090B; color: #E5E7EB; overflow-x: hidden; }
+    html, body { max-width: 100vw; overflow-x: hidden; margin: 0; padding: 0; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #09090B; color: #E5E7EB; }
     .gold-shimmer {
       background: linear-gradient(135deg, #FFF1C5 0%, #D4AF37 40%, #8C6D07 80%, #E6C86E 100%);
       -webkit-background-clip: text;
@@ -71,34 +72,33 @@
 </head>
 <body class="selection:bg-amber-500 selection:text-black">
 
-  <!-- TOP PROMO STRIP -->
-  <div class="bg-gradient-to-r from-[#947116] via-[#D4AF37] to-[#805C06] text-black py-2 px-4 text-xs font-semibold tracking-wide">
+  <!-- TOP PROMO STRIP (100% Mobile Safe) -->
+  <div class="bg-gradient-to-r from-[#947116] via-[#D4AF37] to-[#805C06] text-black py-2 px-3 text-[11px] sm:text-xs font-semibold tracking-wide w-full">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
-      <div class="flex items-center gap-2">
-        <span class="animate-pulse">✨</span>
-        <span><b>Exclusive New Delhi Offer:</b> Flat 15% Savings on Direct Takeaway & Event Enquiries</span>
+      <div class="flex items-center justify-center gap-1.5 flex-wrap">
+        <span>✨ <b>New Delhi Offer:</b> Flat 15% OFF on Direct Takeaway & Enquiries</span>
       </div>
-      <div class="flex items-center gap-4">
-        <span>📍 Connaught Place, New Delhi</span>
-        <a href="tel:+919570151834" class="font-bold underline hover:text-white transition flex items-center gap-1.5">
-          <i class="fa-solid fa-phone text-[11px]"></i> +91 9570151834
+      <div class="flex items-center justify-center gap-3 text-[11px]">
+        <span>📍 Connaught Place</span>
+        <a href="tel:+919570151834" class="font-bold underline hover:text-white transition flex items-center gap-1">
+          <i class="fa-solid fa-phone text-[10px]"></i> +91 9570151834
         </a>
       </div>
     </div>
   </div>
 
-  <!-- STICKY HEADER -->
-  <header class="sticky top-0 z-50 bg-[#09090B]/95 backdrop-blur-xl border-b border-amber-500/20 shadow-2xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+  <!-- STICKY HEADER (Ultra Responsive Mobile & Desktop) -->
+  <header class="sticky top-0 z-50 bg-[#09090B]/95 backdrop-blur-xl border-b border-amber-500/20 shadow-2xl w-full">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group flex-shrink-0">
-        <div class="w-11 h-11 rounded-full border-2 border-amber-400/60 bg-gradient-to-br from-amber-500/20 to-black flex items-center justify-center shadow-lg shadow-amber-500/10 group-hover:border-amber-300 transition flex-shrink-0">
-          <i class="fa-solid fa-crown text-amber-400 text-base group-hover:scale-110 transition"></i>
+      <a href="#" class="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-amber-400/60 bg-gradient-to-br from-amber-500/20 to-black flex items-center justify-center shadow-lg shadow-amber-500/10 group-hover:border-amber-300 transition flex-shrink-0">
+          <i class="fa-solid fa-crown text-amber-400 text-sm sm:text-base group-hover:scale-110 transition"></i>
         </div>
-        <div class="whitespace-nowrap">
-          <span class="font-royal text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-amber-300 transition block leading-tight">THE ROYAL DINE</span>
-          <p class="text-[9px] uppercase tracking-[0.2em] text-amber-400 font-semibold leading-tight">Fine Dining • Connaught Place, New Delhi</p>
+        <div>
+          <span class="font-royal text-base sm:text-xl font-bold tracking-wider text-white group-hover:text-amber-300 transition block leading-tight">THE ROYAL DINE</span>
+          <p class="hidden sm:block text-[9px] uppercase tracking-[0.2em] text-amber-400 font-semibold leading-tight">Fine Dining • Connaught Place, New Delhi</p>
         </div>
       </a>
 
@@ -112,22 +112,41 @@
         <a href="#location" class="hover:text-amber-400 transition">Location</a>
       </nav>
 
-      <!-- CTA Action Buttons (Single Line, No Wrap) -->
+      <!-- CTA Action Buttons -->
       <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-        <a href="tel:+919570151834" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-amber-500/30 text-xs font-semibold text-gray-200 hover:border-amber-400 hover:text-amber-300 transition whitespace-nowrap">
+        <a href="tel:+919570151834" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-amber-500/30 text-xs font-semibold text-gray-200 hover:border-amber-400 hover:text-amber-300 transition whitespace-nowrap">
           <i class="fa-solid fa-phone text-amber-400 text-[11px]"></i>
           <span>+91 9570151834</span>
         </a>
-        <a href="https://wa.me/919570151834?text=Hello%20The%20Royal%20Dine%20Delhi,%20I%20would%20like%20to%20reserve%20a%20table%20or%20inquire%20about%20an%20event." target="_blank" class="px-4 sm:px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-amber-500/25 transition transform hover:-translate-y-0.5 whitespace-nowrap">
-          <i class="fa-brands fa-whatsapp text-base"></i>
+        <a href="https://wa.me/919570151834?text=Hello%20The%20Royal%20Dine%20Delhi,%20I%20would%20like%20to%20reserve%20a%20table%20or%20inquire%20about%20an%20event." target="_blank" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 shadow-lg shadow-amber-500/25 transition transform hover:-translate-y-0.5 whitespace-nowrap">
+          <i class="fa-brands fa-whatsapp text-sm sm:text-base"></i>
           <span>Reserve Table</span>
+        </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" aria-label="Toggle navigation" class="xl:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#18181D] border border-amber-500/30 flex items-center justify-center text-amber-400 hover:text-white transition">
+          <i class="fa-solid fa-bars text-sm" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide Drawer -->
+    <div id="mobileDrawer" class="hidden xl:hidden bg-[#0D0D10] border-b border-amber-500/20 px-5 py-4 space-y-3 text-sm font-medium">
+      <a href="#about" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-amber-400 py-1.5 border-b border-white/5">Our Heritage</a>
+      <a href="#menu" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-amber-400 py-1.5 border-b border-white/5">Digital Menu (16+ Items)</a>
+      <a href="#celebrations" onclick="toggleMobileMenu()" class="block text-amber-300 hover:text-amber-200 py-1.5 border-b border-white/5 font-semibold">Celebrations & Parties</a>
+      <a href="#ambience" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-amber-400 py-1.5 border-b border-white/5">Ambience Gallery</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-amber-400 py-1.5 border-b border-white/5">Google Reviews</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block text-gray-300 hover:text-amber-400 py-1.5">Connaught Place Location</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="tel:+919570151834" class="w-full py-2.5 rounded-xl border border-amber-500/30 text-amber-300 text-center font-bold text-xs flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone"></i> Call: +91 9570151834
         </a>
       </div>
     </div>
   </header>
 
   <!-- LUXURY HERO SLIDESHOW (5 SLIDES) -->
-  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  <section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden w-full">
     <!-- Slide 1: Fine Dining Royal Hall -->
     <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85');"></div>
     <!-- Slide 2: Charcoal Tandoor & Kebabs -->
@@ -143,72 +162,72 @@
     <div class="absolute inset-0 bg-gradient-to-t from-[#09090B] via-black/75 to-black/60 pointer-events-none"></div>
 
     <!-- Hero Content -->
-    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-24 sm:py-32">
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-14 sm:py-28">
       
       <!-- Verified Google Rating Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/40 bg-black/70 backdrop-blur-md mb-8 shadow-xl">
-        <span class="flex text-amber-400 text-sm">
+      <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-amber-500/40 bg-black/70 backdrop-blur-md mb-6 sm:mb-8 shadow-xl max-w-full">
+        <span class="flex text-amber-400 text-xs sm:text-sm">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
         </span>
-        <span class="text-xs font-semibold text-gray-200">
-          <strong class="text-white">4.8 / 5.0</strong> on Google Reviews (1,480+ Delhi Diners)
+        <span class="text-[11px] sm:text-xs font-semibold text-gray-200 truncate">
+          <strong class="text-white">4.8 / 5.0</strong> on Google (1,480+ Diners)
         </span>
       </div>
 
-      <h1 class="font-royal text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight tracking-wide mb-6">
+      <h1 class="font-royal text-3xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-wide mb-4 sm:mb-6">
         Imperial Flavors, <br>
         <span class="gold-shimmer italic font-serif">Regal Celebrations.</span>
       </h1>
 
-      <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg mb-10 leading-relaxed font-light">
+      <p class="max-w-2xl mx-auto text-gray-300 text-xs sm:text-base md:text-lg mb-8 sm:mb-10 leading-relaxed font-light px-2">
         New Delhi's premier destination for artisanal North Indian heritage recipes, Mughlai slow-cooked handis, and private luxury celebration banquets in Connaught Place.
       </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-sm tracking-wide shadow-xl shadow-amber-500/25 transition flex items-center justify-center gap-2.5">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto sm:max-w-none">
+        <a href="#menu" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs sm:text-sm tracking-wide shadow-xl shadow-amber-500/25 transition flex items-center justify-center gap-2">
           <i class="fa-solid fa-utensils"></i>
           <span>Explore 16+ Special Dishes</span>
         </a>
-        <a href="#celebrations" class="w-full sm:w-auto px-8 py-4 rounded-full border border-amber-400/50 bg-black/40 hover:bg-amber-500/10 hover:border-amber-300 text-amber-300 font-semibold text-sm backdrop-blur-md transition flex items-center justify-center gap-2.5">
+        <a href="#celebrations" class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-full border border-amber-400/50 bg-black/40 hover:bg-amber-500/10 hover:border-amber-300 text-amber-300 font-semibold text-xs sm:text-sm backdrop-blur-md transition flex items-center justify-center gap-2">
           <i class="fa-solid fa-champagne-glasses"></i>
           <span>Book Party / Anniversary</span>
         </a>
       </div>
 
       <!-- Slide Indicator Dots -->
-      <div class="flex items-center justify-center gap-2.5 mt-14" id="slideDots">
-        <button class="w-8 h-2 rounded-full bg-amber-400 transition-all duration-300" onclick="setSlide(0)"></button>
-        <button class="w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(1)"></button>
-        <button class="w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(2)"></button>
-        <button class="w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(3)"></button>
-        <button class="w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(4)"></button>
+      <div class="flex items-center justify-center gap-2 sm:gap-2.5 mt-8 sm:mt-14" id="slideDots">
+        <button class="w-7 sm:w-8 h-2 rounded-full bg-amber-400 transition-all duration-300" onclick="setSlide(0)"></button>
+        <button class="w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(1)"></button>
+        <button class="w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(2)"></button>
+        <button class="w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(3)"></button>
+        <button class="w-2 sm:w-2.5 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300" onclick="setSlide(4)"></button>
       </div>
 
-      <!-- Quick Pillars -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-white/10 text-left">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-            <i class="fa-solid fa-fire-burner text-lg"></i>
+      <!-- Quick Pillars (Compact Mobile Responsive) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 mt-8 sm:mt-16 pt-6 sm:pt-10 border-t border-white/10 text-left">
+        <div class="flex items-center gap-2 sm:gap-3 p-2 rounded-xl bg-black/40 sm:bg-transparent border border-white/5 sm:border-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+            <i class="fa-solid fa-fire-burner text-sm sm:text-lg"></i>
           </div>
-          <div><p class="text-sm font-bold text-white">Charcoal Tandoor</p><p class="text-xs text-gray-400">Authentic Clay Oven</p></div>
+          <div class="min-w-0"><p class="text-xs sm:text-sm font-bold text-white truncate">Charcoal Tandoor</p><p class="text-[10px] sm:text-xs text-gray-400 truncate">Clay Oven</p></div>
         </div>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-            <i class="fa-solid fa-cake-candles text-lg"></i>
+        <div class="flex items-center gap-2 sm:gap-3 p-2 rounded-xl bg-black/40 sm:bg-transparent border border-white/5 sm:border-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+            <i class="fa-solid fa-cake-candles text-sm sm:text-lg"></i>
           </div>
-          <div><p class="text-sm font-bold text-white">Event Lounges</p><p class="text-xs text-gray-400">Up to 150 Guests</p></div>
+          <div class="min-w-0"><p class="text-xs sm:text-sm font-bold text-white truncate">Event Lounges</p><p class="text-[10px] sm:text-xs text-gray-400 truncate">Up to 150 Guests</p></div>
         </div>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-            <i class="fa-solid fa-wallet text-lg"></i>
+        <div class="flex items-center gap-2 sm:gap-3 p-2 rounded-xl bg-black/40 sm:bg-transparent border border-white/5 sm:border-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+            <i class="fa-solid fa-wallet text-sm sm:text-lg"></i>
           </div>
-          <div><p class="text-sm font-bold text-white">0% Commission</p><p class="text-xs text-gray-400">Direct WhatsApp Orders</p></div>
+          <div class="min-w-0"><p class="text-xs sm:text-sm font-bold text-white truncate">0% Commission</p><p class="text-[10px] sm:text-xs text-gray-400 truncate">Direct WhatsApp</p></div>
         </div>
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
-            <i class="fa-solid fa-location-dot text-lg"></i>
+        <div class="flex items-center gap-2 sm:gap-3 p-2 rounded-xl bg-black/40 sm:bg-transparent border border-white/5 sm:border-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+            <i class="fa-solid fa-location-dot text-sm sm:text-lg"></i>
           </div>
-          <div><p class="text-sm font-bold text-white">Connaught Place</p><p class="text-xs text-gray-400">Valet Parking Available</p></div>
+          <div class="min-w-0"><p class="text-xs sm:text-sm font-bold text-white truncate">Connaught Place</p><p class="text-[10px] sm:text-xs text-gray-400 truncate">Valet Parking</p></div>
         </div>
       </div>
 
@@ -1220,6 +1239,25 @@
     function closeModal(id) {
       const modal = document.getElementById(id);
       if (modal) modal.classList.add('hidden');
+    }
+
+    // Mobile Drawer Toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      const icon = document.getElementById('menuIcon');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        if (icon) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
+      } else {
+        drawer.classList.add('hidden');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
     }
   </script>
 
