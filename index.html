@@ -89,41 +89,38 @@
 
   <!-- STICKY HEADER -->
   <header class="sticky top-0 z-50 bg-[#09090B]/95 backdrop-blur-xl border-b border-amber-500/20 shadow-2xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-12 h-12 rounded-full border-2 border-amber-400/60 bg-gradient-to-br from-amber-500/20 to-black flex items-center justify-center shadow-lg shadow-amber-500/10 group-hover:border-amber-300 transition">
-          <i class="fa-solid fa-crown text-amber-400 text-lg group-hover:scale-110 transition"></i>
+      <a href="#" class="flex items-center gap-3 group flex-shrink-0">
+        <div class="w-11 h-11 rounded-full border-2 border-amber-400/60 bg-gradient-to-br from-amber-500/20 to-black flex items-center justify-center shadow-lg shadow-amber-500/10 group-hover:border-amber-300 transition flex-shrink-0">
+          <i class="fa-solid fa-crown text-amber-400 text-base group-hover:scale-110 transition"></i>
         </div>
-        <div>
-          <span class="font-royal text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-amber-300 transition">THE ROYAL DINE</span>
-          <p class="text-[9px] uppercase tracking-[0.25em] text-amber-400 font-semibold">Fine Dining & Luxury Lounge • New Delhi</p>
+        <div class="whitespace-nowrap">
+          <span class="font-royal text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-amber-300 transition block leading-tight">THE ROYAL DINE</span>
+          <p class="text-[9px] uppercase tracking-[0.2em] text-amber-400 font-semibold leading-tight">Fine Dining • Connaught Place, New Delhi</p>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-gray-300">
+      <!-- Desktop Nav (Clean, No Wrapping) -->
+      <nav class="hidden xl:flex items-center gap-6 font-medium text-sm text-gray-300 whitespace-nowrap">
         <a href="#about" class="hover:text-amber-400 transition">Our Heritage</a>
-        <a href="#menu" class="hover:text-amber-400 transition flex items-center gap-1">
-          <span>Digital Menu</span>
-          <span class="bg-amber-500/20 text-amber-300 text-[10px] px-1.5 py-0.5 rounded font-bold border border-amber-500/40">16+ Dishes</span>
-        </a>
-        <a href="#celebrations" class="hover:text-amber-400 transition text-amber-300 font-semibold">Party & Celebrations</a>
+        <a href="#menu" class="hover:text-amber-400 transition">Digital Menu</a>
+        <a href="#celebrations" class="hover:text-amber-400 transition text-amber-300 font-semibold">Celebrations</a>
         <a href="#ambience" class="hover:text-amber-400 transition">Ambience</a>
         <a href="#reviews" class="hover:text-amber-400 transition">Google Reviews</a>
         <a href="#location" class="hover:text-amber-400 transition">Location</a>
       </nav>
 
-      <!-- CTA Action Buttons -->
-      <div class="flex items-center gap-3">
-        <a href="tel:+919570151834" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-xs font-semibold hover:border-amber-400 hover:text-amber-300 transition">
-          <i class="fa-solid fa-phone text-amber-400"></i>
-          <span>Call Now</span>
+      <!-- CTA Action Buttons (Single Line, No Wrap) -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <a href="tel:+919570151834" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-amber-500/30 text-xs font-semibold text-gray-200 hover:border-amber-400 hover:text-amber-300 transition whitespace-nowrap">
+          <i class="fa-solid fa-phone text-amber-400 text-[11px]"></i>
+          <span>+91 9570151834</span>
         </a>
-        <a href="https://wa.me/919570151834?text=Hello%20The%20Royal%20Dine%20Delhi,%20I%20would%20like%20to%20reserve%20a%20table%20or%20inquire%20about%20an%20event." target="_blank" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-amber-500/25 transition transform hover:-translate-y-0.5">
+        <a href="https://wa.me/919570151834?text=Hello%20The%20Royal%20Dine%20Delhi,%20I%20would%20like%20to%20reserve%20a%20table%20or%20inquire%20about%20an%20event." target="_blank" class="px-4 sm:px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-amber-500/25 transition transform hover:-translate-y-0.5 whitespace-nowrap">
           <i class="fa-brands fa-whatsapp text-base"></i>
-          <span>Reserve / Order</span>
+          <span>Reserve Table</span>
         </a>
       </div>
     </div>
@@ -219,108 +216,124 @@
   </section>
 
   <!-- CELEBRATIONS & PRIVATE PARTIES SECTION -->
-  <section id="celebrations" class="py-24 bg-gradient-to-b from-[#09090B] via-[#121216] to-[#09090B] border-y border-amber-500/20">
+  <section id="celebrations" class="scroll-mt-20 py-16 bg-gradient-to-b from-[#09090B] via-[#121216] to-[#09090B] border-y border-amber-500/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="inline-block px-4 py-1 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-300 text-xs font-semibold uppercase tracking-widest mb-3">
-          Bespoke Events & Banqueting
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block px-3.5 py-1 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-300 text-[11px] font-semibold uppercase tracking-widest mb-2.5">
+          Bespoke Events & Banquets
         </span>
-        <h2 class="font-royal text-3xl sm:text-5xl font-bold text-white">Celebrate Life's Grand Milestones</h2>
-        <p class="text-gray-400 text-sm sm:text-base mt-4 leading-relaxed">
-          From intimate candlelight wedding anniversaries to grand 100-guest Ring Ceremonies, our dedicated event curators design custom multi-course menus, royal decor, and private DJ sound.
+        <h2 class="font-royal text-2xl sm:text-4xl font-bold text-white tracking-wide">Celebrate Life's Grand Milestones</h2>
+        <p class="text-gray-400 text-xs sm:text-sm mt-2.5 leading-relaxed">
+          From intimate romantic anniversaries to 120-guest Ring Ceremonies & Roka functions in Connaught Place.
         </p>
       </div>
 
-      <!-- 4 Event Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- 4 Visual Luxury Event Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         
         <!-- Event 1: Ring Ceremony & Roka -->
-        <div class="gold-box-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition group">
+        <div class="bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/25 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400/20 to-amber-600/10 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition">
-              <i class="fa-solid fa-ring text-2xl"></i>
+            <div class="h-40 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Ring Ceremony Banquet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#141418] via-black/40 to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
+                <i class="fa-solid fa-ring text-amber-400"></i> 40 - 120 Guests
+              </span>
             </div>
-            <h3 class="font-royal text-xl font-bold text-white mb-2">Ring Ceremony & Roka</h3>
-            <p class="text-xs text-amber-300/80 font-medium mb-3">Capacity: 40 - 120 Guests</p>
-            <p class="text-gray-400 text-xs leading-relaxed mb-6">
-              Grand floral welcome arch, dedicated stage for exchange of rings, 5-course Awadhi royal buffet, and private hospitality attendants.
-            </p>
-            <ul class="text-xs text-gray-300 space-y-2 mb-6">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Live Chaat & Mocktail Counter</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Professional Photography Zone</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Dedicated Family Lounge</li>
-            </ul>
+            <div class="p-5 pt-3">
+              <h3 class="font-royal text-lg font-bold text-white mb-1.5 group-hover:text-amber-300 transition">Ring Ceremony & Roka</h3>
+              <p class="text-gray-400 text-xs line-clamp-2 mb-3">Grand floral stage, 5-course Awadhi royal buffet, and private family celebration lounge.</p>
+              <div class="space-y-1.5 text-[11px] text-gray-300 mb-4">
+                <p class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Live Chaat & Mocktail Bar</p>
+                <p class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Photo Booth & Floral Stage</p>
+              </div>
+            </div>
           </div>
-          <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20inquire%20about%20booking%20a%20Ring%20Ceremony%20/%20Roka%20at%20The%20Royal%20Dine%20Delhi." target="_blank" class="w-full py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-amber-500/30">
-            <i class="fa-brands fa-whatsapp"></i> Inquire Roka Package
-          </a>
+          <div class="px-5 pb-5">
+            <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20inquire%20about%20booking%20a%20Ring%20Ceremony%20/%20Roka%20at%20The%20Royal%20Dine%20Delhi." target="_blank" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs tracking-wide uppercase transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Inquire Roka Package
+            </a>
+          </div>
         </div>
 
         <!-- Event 2: Marriage Anniversary & Candlelight -->
-        <div class="gold-box-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition group">
+        <div class="bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/25 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500/20 to-amber-600/10 border border-rose-500/30 flex items-center justify-center text-rose-400 mb-6 group-hover:scale-110 transition">
-              <i class="fa-solid fa-heart text-2xl"></i>
+            <div class="h-40 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=600&q=80" alt="Candlelight Dinner Cabana" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#141418] via-black/40 to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-500/30 flex items-center gap-1">
+                <i class="fa-solid fa-heart text-rose-400"></i> Couple Cabana
+              </span>
             </div>
-            <h3 class="font-royal text-xl font-bold text-white mb-2">Anniversary & Romance</h3>
-            <p class="text-xs text-rose-300/80 font-medium mb-3">Private Cabana / Couple Tables</p>
-            <p class="text-gray-400 text-xs leading-relaxed mb-6">
-              Rose petal illuminated table, candlelight chandelier, personalized heart-shaped artisanal cake, and chef's curated 4-course dinner with sparkling mocktails.
-            </p>
-            <ul class="text-xs text-gray-300 space-y-2 mb-6">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Red Carpet & Fairy Lights</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Customized Anniversary Cake</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Private Butler Service</li>
-            </ul>
+            <div class="p-5 pt-3">
+              <h3 class="font-royal text-lg font-bold text-white mb-1.5 group-hover:text-amber-300 transition">Anniversary & Romance</h3>
+              <p class="text-gray-400 text-xs line-clamp-2 mb-3">Rose petal table, candlelight chandelier, artisanal cake, and chef's curated 4-course dinner.</p>
+              <div class="space-y-1.5 text-[11px] text-gray-300 mb-4">
+                <p class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Fairy Lights & Rose Cabana</p>
+                <p class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Complimentary Cake & Mocktails</p>
+              </div>
+            </div>
           </div>
-          <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20book%20a%20Candlelight%20Dinner%20/%20Anniversary%20Celebration%20at%20The%20Royal%20Dine." target="_blank" class="w-full py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-amber-500/30">
-            <i class="fa-brands fa-whatsapp"></i> Reserve Cabana
-          </a>
+          <div class="px-5 pb-5">
+            <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20book%20a%20Candlelight%20Dinner%20/%20Anniversary%20Celebration%20at%20The%20Royal%20Dine." target="_blank" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs tracking-wide uppercase transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Reserve Cabana
+            </a>
+          </div>
         </div>
 
         <!-- Event 3: Birthday & Milestone Bash -->
-        <div class="gold-box-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition group">
+        <div class="bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/25 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400/20 to-amber-600/10 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition">
-              <i class="fa-solid fa-cake-candles text-2xl"></i>
+            <div class="h-40 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Birthday Party Lounge" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#141418] via-black/40 to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
+                <i class="fa-solid fa-cake-candles text-amber-400"></i> 15 - 80 Guests
+              </span>
             </div>
-            <h3 class="font-royal text-xl font-bold text-white mb-2">Birthday Celebrations</h3>
-            <p class="text-xs text-amber-300/80 font-medium mb-3">Capacity: 15 - 80 Guests</p>
-            <p class="text-gray-400 text-xs leading-relaxed mb-6">
-              High-energy private party zone, balloon & LED backdrop decor, endless tandoori appetizer rotation, mocktail bar, and surround sound beats.
-            </p>
-            <ul class="text-xs text-gray-300 space-y-2 mb-6">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Unlimited Starters Buffet</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Premium DJ Sound & Lights</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Customized Theme Decor</li>
-            </ul>
+            <div class="p-5 pt-3">
+              <h3 class="font-royal text-lg font-bold text-white mb-1.5 group-hover:text-amber-300 transition">Birthday Celebrations</h3>
+              <p class="text-gray-400 text-xs line-clamp-2 mb-3">High-energy private lounge, LED backdrop decor, endless tandoori starters and surround beats.</p>
+              <div class="space-y-1.5 text-[11px] text-gray-300 mb-4">
+                <p class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Unlimited Starters Buffet</p>
+                <p class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> DJ Sound & Balloon Theme</p>
+              </div>
+            </div>
           </div>
-          <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20plan%20a%20Birthday%20Party%20at%20The%20Royal%20Dine%20Delhi." target="_blank" class="w-full py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-amber-500/30">
-            <i class="fa-brands fa-whatsapp"></i> Get Birthday Quote
-          </a>
+          <div class="px-5 pb-5">
+            <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20plan%20a%20Birthday%20Party%20at%20The%20Royal%20Dine%20Delhi." target="_blank" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs tracking-wide uppercase transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Get Birthday Quote
+            </a>
+          </div>
         </div>
 
         <!-- Event 4: Corporate & Executive Dinners -->
-        <div class="gold-box-border rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition group">
+        <div class="bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/25 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group shadow-xl hover:-translate-y-1">
           <div>
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/20 to-amber-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition">
-              <i class="fa-solid fa-briefcase text-2xl"></i>
+            <div class="h-40 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Corporate Gala Dinner" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#141418] via-black/40 to-transparent"></div>
+              <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30 flex items-center gap-1">
+                <i class="fa-solid fa-briefcase text-blue-400"></i> 20 - 150 Guests
+              </span>
             </div>
-            <h3 class="font-royal text-xl font-bold text-white mb-2">Corporate & Cocktails</h3>
-            <p class="text-xs text-blue-300/80 font-medium mb-3">Capacity: 20 - 150 Guests</p>
-            <p class="text-gray-400 text-xs leading-relaxed mb-6">
-              Soundproof private executive dining room with 4K projection display, seamless Wi-Fi, pre-set corporate menus, and discreet formal service.
-            </p>
-            <ul class="text-xs text-gray-300 space-y-2 mb-6">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Audiovisual Presentation Tech</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Corporate Tax Invoicing (GST)</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Valet & Chauffeur Care</li>
-            </ul>
+            <div class="p-5 pt-3">
+              <h3 class="font-royal text-lg font-bold text-white mb-1.5 group-hover:text-amber-300 transition">Corporate & Cocktails</h3>
+              <p class="text-gray-400 text-xs line-clamp-2 mb-3">Soundproof executive dining with 4K projection display, pre-set corporate menus and formal service.</p>
+              <div class="space-y-1.5 text-[11px] text-gray-300 mb-4">
+                <p class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> 4K Presentation AV Setup</p>
+                <p class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> Corporate GST Invoicing</p>
+              </div>
+            </div>
           </div>
-          <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20book%20a%20Corporate%20Dinner%20/%20Conference%20at%20The%20Royal%20Dine." target="_blank" class="w-full py-3 rounded-xl bg-amber-500/15 hover:bg-amber-500 text-amber-300 hover:text-black font-semibold text-xs tracking-wider uppercase transition flex items-center justify-center gap-2 border border-amber-500/30">
-            <i class="fa-brands fa-whatsapp"></i> Inquire Corporate Deal
-          </a>
+          <div class="px-5 pb-5">
+            <a href="https://wa.me/919570151834?text=Hi,%20I%20want%20to%20book%20a%20Corporate%20Dinner%20/%20Conference%20at%20The%20Royal%20Dine." target="_blank" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold text-xs tracking-wide uppercase transition flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Inquire Corporate Deal
+            </a>
+          </div>
         </div>
 
       </div>
