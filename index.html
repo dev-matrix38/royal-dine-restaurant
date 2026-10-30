@@ -372,366 +372,1116 @@
         Click on any dish to order directly on WhatsApp with <b>0% Commission</b> and instant kitchen dispatch.
       </p>
 
-      <!-- Category Filter Pills -->
+            <!-- Category Filter Pills -->
       <div class="flex items-center justify-center gap-2 sm:gap-3 mt-8 flex-wrap">
-        <button onclick="filterMenu('all')" class="menu-tab-btn active px-5 py-2 rounded-full text-xs font-bold bg-amber-500 text-black shadow-lg shadow-amber-500/20 transition">All Dishes (16)</button>
-        <button onclick="filterMenu('starters')" class="menu-tab-btn px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Tandoor & Starters</button>
-        <button onclick="filterMenu('mains')" class="menu-tab-btn px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Royal Gravies</button>
-        <button onclick="filterMenu('biryani')" class="menu-tab-btn px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Dum Biryanis</button>
-        <button onclick="filterMenu('desserts')" class="menu-tab-btn px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Shahi Desserts & Drinks</button>
+        <button onclick="filterMenu('all', this)" class="menu-tab-btn active px-4 sm:px-5 py-2 rounded-full text-xs font-bold bg-amber-500 text-black shadow-lg shadow-amber-500/20 transition">All Dishes (50)</button>
+        <button onclick="filterMenu('starters', this)" class="menu-tab-btn px-4 sm:px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Tandoor & Starters (10)</button>
+        <button onclick="filterMenu('mains', this)" class="menu-tab-btn px-4 sm:px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Royal Gravies (14)</button>
+        <button onclick="filterMenu('biryani', this)" class="menu-tab-btn px-4 sm:px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Dum Biryanis (6)</button>
+        <button onclick="filterMenu('breads', this)" class="menu-tab-btn px-4 sm:px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Artisanal Breads (6)</button>
+        <button onclick="filterMenu('chinese', this)" class="menu-tab-btn px-4 sm:px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Indo-Chinese (6)</button>
+        <button onclick="filterMenu('desserts', this)" class="menu-tab-btn px-4 sm:px-5 py-2 rounded-full text-xs font-medium bg-[#18181D] text-gray-300 hover:text-white border border-white/10 transition">Desserts & Drinks (8)</button>
       </div>
     </div>
 
-    <!-- 16 Dishes Grid -->
+    <!-- 50 Real Restaurant Dishes Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="dishesGrid">
 
-      <!-- Item 1 -->
-      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 1: Tandoori Murgh (Full/Half) -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=700&q=80" alt="Murgh Malai Tikka" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Chickentandoori.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled" alt="Tandoori Murgh (Full/Half)" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹480</span>
-            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-red-500/40">
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
               <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Afghani Murgh Malai Tikka</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tender chicken chunks marinated in cashew cream, white pepper, royal cardamom and charcoal smoked.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Tandoori Murgh (Full/Half)</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Classic bone-in chicken marinated overnight in Kashmiri chili, hung curd, and roasted whole spices, chargrilled in clay tandoor.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Afghani%20Murgh%20Malai%20Tikka%20(₹480)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Tandoori%20Murgh%20%28Full/Half%29%20(Rs.%20480)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 2 -->
-      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 2: Afghani Chicken Tikka -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Bhatti Paneer Tikka" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹390</span>
-            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
-              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tandoorimumbai.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled" alt="Afghani Chicken Tikka" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹420</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Bhatti Ka Malai Paneer</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fresh cottage cheese cubes cured in hung curd, yellow chilli, degi mirch and roasted over clay embers.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Afghani Chicken Tikka</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tender boneless chicken morsels infused with cashew paste, cardamom, heavy cream, and char-grilled with smoked butter.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Bhatti%20Ka%20Malai%20Paneer%20(₹390)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Afghani%20Chicken%20Tikka%20(Rs.%20420)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 3 -->
-      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 3: Murgh Malai Kebab -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" alt="Galouti Kebab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Murgh_Malai_Kabab_%28Tikka%29.JPG/960px-Murgh_Malai_Kabab_%28Tikka%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Murgh Malai Kebab" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹440</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Murgh Malai Kebab</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Melt-in-mouth chicken chunks steeped in cream, royal spices, cream cheese, and gently flame-kissed over charcoal embers.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Murgh%20Malai%20Kebab%20(Rs.%20440)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 4: Royal Mutton Seekh Kebab -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Pakistani_Food_Beef_Kabobs.jpg/960px-Pakistani_Food_Beef_Kabobs.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Royal Mutton Seekh Kebab" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹520</span>
-            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
-              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Awadhi Signature
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Royal Mutton Seekh Kebab</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Minced tender lamb blended with royal herbs, ginger, mint, threaded on skewers and smoked over natural charcoal.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Royal%20Mutton%20Seekh%20Kebab%20(Rs.%20520)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 5: Lucknowi Galouti Kebab -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/4th_October_2012_Shami_Kebab.jpg/960px-4th_October_2012_Shami_Kebab.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Lucknowi Galouti Kebab" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹540</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
             </span>
           </div>
           <div class="p-5">
             <h3 class="font-royal text-lg font-bold text-white mb-1.5">Lucknowi Galouti Kebab</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Melt-in-mouth smoked mince with 32 rare Awadhi spices, served over bite-sized saffron Ulta Tawa paratha.</p>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Velvety Awadhi mutton patties ground finely with 32 fragrant spices, pan-seared to silk perfection on traditional mahi tawa.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Lucknowi%20Galouti%20Kebab%20(₹520)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Lucknowi%20Galouti%20Kebab%20(Rs.%20540)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 4 -->
-      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 6: Amritsari Fish Fry -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=700&q=80" alt="Dahi Kebab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹360</span>
-            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
-              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
-            </span>
-          </div>
-          <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Crispy Dahi Ke Kebab</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Velvety hung curd blended with crushed coriander seeds, pomegranate, fried crisp with mint coulis.</p>
-          </div>
-        </div>
-        <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Crispy%20Dahi%20Ke%20Kebab%20(₹360)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
-            <i class="fa-brands fa-whatsapp text-sm"></i> Order
-          </a>
-        </div>
-      </div>
-
-      <!-- Item 5: Mains -->
-      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
-        <div>
-          <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="Dal Makhani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹410</span>
-            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
-              <span class="w-2 h-2 rounded-full bg-amber-400"></span> 24-Hr Slow Simmer
-            </span>
-          </div>
-          <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Dal Bukhara (The Royal 24h)</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Slow-simmered whole black lentils over tandoor embers for 24 continuous hours with organic white butter.</p>
-          </div>
-        </div>
-        <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Dal%20Bukhara%20(₹410)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
-            <i class="fa-brands fa-whatsapp text-sm"></i> Order
-          </a>
-        </div>
-      </div>
-
-      <!-- Item 6: Mains -->
-      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
-        <div>
-          <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Butter Chicken" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Fried_Fish_and_French_Fries.jpg/960px-Fried_Fish_and_French_Fries.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Amritsari Fish Fry" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹560</span>
-            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-red-500/40">
-              <span class="w-2 h-2 rounded-full bg-red-500"></span> Delhi-6 Heritage
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Delhi-6 Aslam Butter Chicken</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Charcoal roasted tandoori chicken submerged in roasted tomato makhani gravy with melted creamy butter.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Amritsari Fish Fry</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crispy carom-seed spiced river sole fillets golden fried in traditional Punjabi batter with spicy mint dip.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Delhi-6%20Butter%20Chicken%20(₹560)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Amritsari%20Fish%20Fry%20(Rs.%20560)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 7: Mains -->
-      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 7: Paneer Tikka Shashlik -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1546833998-877b37c2e5c6?auto=format&fit=crop&w=700&q=80" alt="Paneer Lababdar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹440</span>
-            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
-              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Paneer_tikka.jpg/960px-Paneer_tikka.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Paneer Tikka Shashlik" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹380</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Paneer Lababdar Shahi</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Cottage cheese steeped in chunky onion-tomato reduction, finished with grated khoya and crushed fenugreek.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Paneer Tikka Shashlik</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Char-grilled fresh cottage cheese cubes, bell peppers and onions marinated in stone-ground mustard paste and aromatic spices.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Paneer%20Lababdar%20Shahi%20(₹440)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Paneer%20Tikka%20Shashlik%20(Rs.%20380)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 8: Mains -->
-      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 8: Dahi Ke Shahi Kebab -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="Nalli Nihari" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Dahi_bhalla_or_dahi_wada_or_dahi_bada.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled" alt="Dahi Ke Shahi Kebab" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹360</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Dahi Ke Shahi Kebab</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crisp shallow-fried golden patties of hung yoghurt, green chillies, coriander and roasted pine nuts with sonth dip.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Dahi%20Ke%20Shahi%20Kebab%20(Rs.%20360)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 9: Shahi Punjabi Samosa Platter -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Samosas%2C_snack_food_at_Wikipedia%27s_16th_Birthday_celebration_in_Chittagong_%2801%29.jpg/960px-Samosas%2C_snack_food_at_Wikipedia%27s_16th_Birthday_celebration_in_Chittagong_%2801%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Shahi Punjabi Samosa Platter" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹220</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Shahi Punjabi Samosa Platter</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crispy handmade pastry cones filled with spiced potatoes, green peas, cashews, served with sonth and pudina chutney.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Shahi%20Punjabi%20Samosa%20Platter%20(Rs.%20220)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 10: Kurkuri Onion & Laccha Pakora -->
+      <div class="dish-card starters bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Onion_pakora_-_a.jpg/960px-Onion_pakora_-_a.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Kurkuri Onion & Laccha Pakora" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹240</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Kurkuri Onion & Laccha Pakora</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crispy julienned onions and seasonal greens in spiced gram flour crunch served with tangy amchur chutney.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Kurkuri%20Onion%20%26%20Laccha%20Pakora%20(Rs.%20240)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 11: Daryaganj Butter Chicken -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg/960px-Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Daryaganj Butter Chicken" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹490</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Daryaganj Butter Chicken</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Iconic Delhi recipe crafted with tandoori pulled chicken simmered in a velvety tomato, churned butter & makhana gravy.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Daryaganj%20Butter%20Chicken%20(Rs.%20490)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 12: Purani Dilli Dal Makhani -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Punjabi_style_Dal_Makhani.jpg/960px-Punjabi_style_Dal_Makhani.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Purani Dilli Dal Makhani" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹390</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Purani Dilli Dal Makhani</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Black lentils slow cooked over tandoor embers for 18 hours, finished with white churned butter and double cream.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Purani%20Dilli%20Dal%20Makhani%20(Rs.%20390)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 13: Shahi Paneer Mughlai -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Shahi_panner.jpg/960px-Shahi_panner.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Shahi Paneer Mughlai" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹420</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Shahi Paneer Mughlai</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Silken cubes of malai paneer simmered in an aromatic white gravy of cashews, saffron, cream and green cardamom.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Shahi%20Paneer%20Mughlai%20(Rs.%20420)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 14: Kashmiri Rogan Josh -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Rogan_Josh_Kashmiri.jpg/960px-Rogan_Josh_Kashmiri.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Kashmiri Rogan Josh" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹580</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Kashmiri Rogan Josh</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Prime tender mutton braised in mountain herbs, authentic Kashmiri deggi mirch, fennel seeds, and mawal extract.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Kashmiri%20Rogan%20Josh%20(Rs.%20580)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 15: Kadhai Paneer Lazeez -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Kadai_Paneer-Delhi-12.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled" alt="Kadhai Paneer Lazeez" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹410</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Kadhai Paneer Lazeez</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fresh cottage cheese tossed with bell peppers, crushed coriander seeds, and hand-pounded red chillies in a wok.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Kadhai%20Paneer%20Lazeez%20(Rs.%20410)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 16: Chicken Tikka Masala -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Chicken_tikka_masala_%28cropped%29.jpg/960px-Chicken_tikka_masala_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Chicken Tikka Masala" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹480</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Chicken Tikka Masala</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Smoked chargrilled chicken tikka chunks simmered in a rich, chunky tomato-onion gravy scented with kasuri methi.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Chicken%20Tikka%20Masala%20(Rs.%20480)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 17: Awadhi Chicken Korma -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Chicken_Korma.JPG/960px-Chicken_Korma.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Awadhi Chicken Korma" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹490</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Awadhi Chicken Korma</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Royal Awadhi chicken simmered in a luscious brown onion, yogurt, melon seed paste, and rose water gravy.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Awadhi%20Chicken%20Korma%20(Rs.%20490)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 18: Palak Paneer Lahsuni -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Palakpaneer_Rayagada_Odisha_0009.jpg/960px-Palakpaneer_Rayagada_Odisha_0009.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Palak Paneer Lahsuni" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹390</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Palak Paneer Lahsuni</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fresh spinach greens blanched and tempered with burnt golden garlic, whole red chilies and creamy cottage cheese.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Palak%20Paneer%20Lahsuni%20(Rs.%20390)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 19: Purani Dilli Nalli Nihari -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Nalli_Nihari_India.jpg/960px-Nalli_Nihari_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Purani Dilli Nalli Nihari" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹620</span>
-            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-red-500/40">
-              <span class="w-2 h-2 rounded-full bg-red-500"></span> Purani Dilli Royal
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
             </span>
           </div>
           <div class="p-5">
             <h3 class="font-royal text-lg font-bold text-white mb-1.5">Purani Dilli Nalli Nihari</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tender mutton shank stew braised overnight with marrow reduction, julienne ginger and fresh lime wedge.</p>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Slow-cooked lamb shank stew simmered overnight with bone marrow broth and 21 aromatic royal herbs.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Purani%20Dilli%20Nalli%20Nihari%20(₹620)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Purani%20Dilli%20Nalli%20Nihari%20(Rs.%20620)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 9: Biryanis -->
-      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 20: Shahi Malai Kofta -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=700&q=80" alt="Awadhi Biryani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹520</span>
-            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
-              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Clay Handi
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Malai_kofta_with_masala_kulcha.jpg/960px-Malai_kofta_with_masala_kulcha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Shahi Malai Kofta" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹420</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Awadhi Gosht Dum Biryani</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fragrant aged basmati sealed in dough over clay handi with saffron, rose water and tender mutton pieces.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Shahi Malai Kofta</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Melt-in-mouth cottage cheese and mawa dumplings gently stewed in a rich cashew-saffron silk sauce.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Awadhi%20Gosht%20Dum%20Biryani%20(₹520)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Shahi%20Malai%20Kofta%20(Rs.%20420)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 10: Biryanis -->
-      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 21: Pindi Chana Masala -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Subz Biryani" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹390</span>
-            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
-              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Chana_masala.jpg/960px-Chana_masala.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Pindi Chana Masala" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹340</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Nawabi Subz Dum Biryani</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fresh garden florets, paneer and baby potatoes layered with caramelized onions, kewra and mint raita.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Pindi Chana Masala</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Traditional Rawalpindi style chickpeas brewed with tea leaves, dry roasted spices, pomegranate seeds and ginger.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Nawabi%20Subz%20Dum%20Biryani%20(₹390)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Pindi%20Chana%20Masala%20(Rs.%20340)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 11: Breads -->
-      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 22: Dhaba Dal Tadka Double -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=80" alt="Chur Chur Naan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹160</span>
-            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
-              <span class="w-2 h-2 rounded-full bg-green-500"></span> Desi Ghee
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Pakistani_Food_Karahi_Beef.jpg/960px-Pakistani_Food_Karahi_Beef.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Dhaba Dal Tadka Double" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹320</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Amritsari Chur-Chur Naan</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Multi-layered crispy crushed bread stuffed with spiced paneer, mashed potatoes and drenched in desi ghee.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Dhaba Dal Tadka Double</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Yellow arhar lentils tempered twice with pure desi ghee, cumin seeds, garlic slivers and dry whole red chilies.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Amritsari%20Chur-Chur%20Naan%20(₹160)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Dhaba%20Dal%20Tadka%20Double%20(Rs.%20320)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 12: Breads -->
-      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 23: Kadhai Murgh Peshawari -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80" alt="Garlic Naan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹140</span>
-            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
-              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Wok-and-karahi-2.jpg/960px-Wok-and-karahi-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Kadhai Murgh Peshawari" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹480</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Truffle Garlic Butter Naan</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tandoor blistered leavened bread brushed with garlic-coriander butter and fine aromatic truffle drizzle.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Kadhai Murgh Peshawari</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Juicy chicken pieces tossed in iron wok with roasted coriander, black pepper, tomatoes and ginger juliennes.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Truffle%20Garlic%20Butter%20Naan%20(₹140)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Kadhai%20Murgh%20Peshawari%20(Rs.%20480)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 13: Desserts -->
-      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 24: Banarasi Aloo Gobi Adraki -->
+      <div class="dish-card mains bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=700&q=80" alt="Shahi Tukda" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹260</span>
-            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
-              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Royal Heritage
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Aloo_Ghobi.jpg/960px-Aloo_Ghobi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Banarasi Aloo Gobi Adraki" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹320</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Mughlai Shahi Tukda</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crisp ghee-toasted brioche soaked in saffron cardamom syrup, topped with thick reduced pistachios rabdi.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Banarasi Aloo Gobi Adraki</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tender florets of cauliflower and potatoes tossed dry with fresh ginger, cumin and royal garam masala.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Mughlai%20Shahi%20Tukda%20(₹260)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Banarasi%20Aloo%20Gobi%20Adraki%20(Rs.%20320)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 14: Desserts -->
-      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 25: Royal Hyderabadi Chicken Biryani -->
+      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80" alt="Baked Rasmalai" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹240</span>
-            <span class="absolute top-3 left-3 bg-green-950/90 text-green-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-green-500/40">
-              <span class="w-2 h-2 rounded-full bg-green-500"></span> Veg
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/960px-Hyderabadi_Chicken_Biryani.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Royal Hyderabadi Chicken Biryani" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹460</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Baked Kesar Rasmalai</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Spongy cottage cheese discs baked with condensed saffron milk, silver vark and crushed Irani pistachios.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Royal Hyderabadi Chicken Biryani</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Long grain aged Basmati layered with marinated chicken, saffron milk, fried onions, dum cooked in handi.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Baked%20Kesar%20Rasmalai%20(₹240)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Royal%20Hyderabadi%20Chicken%20Biryani%20(Rs.%20460)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 15: Mocktails & Drinks -->
-      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 26: Mutton Dum Biryani Nawabi -->
+      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80" alt="Smoked Passion Mojito" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Lucknowi_Mutton_Matka_Dum_Biriyani.jpg/960px-Lucknowi_Mutton_Matka_Dum_Biriyani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Mutton Dum Biryani Nawabi" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹560</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Mutton Dum Biryani Nawabi</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Succulent baby lamb pieces layered with aged basmati, fresh mint, rose water and saffron sealed with dough.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Mutton%20Dum%20Biryani%20Nawabi%20(Rs.%20560)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 27: Awadhi Lucknowi Biryani -->
+      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg/960px-%22Hyderabadi_Dum_Biryani%22.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Awadhi Lucknowi Biryani" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹470</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Awadhi Lucknowi Biryani</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fragrant light yakhni pulao style biryani flavored with ittar, mace, kewra, and tender chicken chunks.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Awadhi%20Lucknowi%20Biryani%20(Rs.%20470)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 28: Shahi Subz Dum Biryani -->
+      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Non_veg_biryani.jpg/960px-Non_veg_biryani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Shahi Subz Dum Biryani" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹380</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Shahi Subz Dum Biryani</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Garden fresh vegetables, paneer cubes, and aromatic basmati slow cooked on dum with mint and saffron.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Shahi%20Subz%20Dum%20Biryani%20(Rs.%20380)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 29: Kashmiri Kesar Pulao -->
+      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Afghan_Palo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled" alt="Kashmiri Kesar Pulao" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹320</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Kashmiri Kesar Pulao</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Sweet fragrant basmati rice cooked in pure saffron broth, studded with fried cashews, almonds, and raisins.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Kashmiri%20Kesar%20Pulao%20(Rs.%20320)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 30: Jeera Basmati Rice -->
+      <div class="dish-card biryani bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Jeera-rice.JPG/960px-Jeera-rice.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Jeera Basmati Rice" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹220</span>
-            <span class="absolute top-3 left-3 bg-blue-950/90 text-blue-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-blue-500/40">
-              <span class="w-2 h-2 rounded-full bg-blue-400"></span> Refreshing
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Smoked Cinnamon Passion Mojito</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Fresh crushed mint, zesty lime, passion fruit pulp topped with club soda and served with torch-smoked cinnamon quill.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Jeera Basmati Rice</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Steamed long grain Royal basmati rice tempered with roasted cumin seeds and aromatic desi ghee.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Smoked%20Passion%20Mojito%20(₹220)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Jeera%20Basmati%20Rice%20(Rs.%20220)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
       </div>
 
-      <!-- Item 16: Mocktails & Drinks -->
-      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between">
+      <!-- Item 31: Butter Naan -->
+      <div class="dish-card breads bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
         <div>
           <div class="h-48 overflow-hidden relative">
-            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=80" alt="Royal Kesaria Thandai" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹240</span>
-            <span class="absolute top-3 left-3 bg-amber-950/90 text-amber-300 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border border-amber-500/40">
-              <span class="w-2 h-2 rounded-full bg-amber-400"></span> Signature
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Annapurna_Naan.jpg/960px-Annapurna_Naan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Butter Naan" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹80</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
             </span>
           </div>
           <div class="p-5">
-            <h3 class="font-royal text-lg font-bold text-white mb-1.5">The Royal Kesaria Badam Thandai</h3>
-            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Stone-ground almonds, watermelon seeds, black pepper, fennel, infused with Kashmiri saffron and rich cream.</p>
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Butter Naan</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Tandoor-baked leavened refined flour bread brushed with molten farm-churned salted butter.</p>
           </div>
         </div>
         <div class="px-5 pb-5">
-          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20The%20Royal%20Kesaria%20Thandai%20(₹240)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Butter%20Naan%20(Rs.%2080)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 32: Garlic Butter Naan -->
+      <div class="dish-card breads bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Adraki_Naan_%28Garlic_Naan%29.JPG/960px-Adraki_Naan_%28Garlic_Naan%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Garlic Butter Naan" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹95</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Garlic Butter Naan</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Hand-stretched dough topped with chopped golden garlic and fresh cilantro, charred in clay oven.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Garlic%20Butter%20Naan%20(Rs.%2095)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 33: Amritsari Aloo Pyaaz Kulcha -->
+      <div class="dish-card breads bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Pindi_cholle-amritsari_kulcha.JPG/960px-Pindi_cholle-amritsari_kulcha.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Amritsari Aloo Pyaaz Kulcha" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹130</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Amritsari Aloo Pyaaz Kulcha</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Flaky layered bread stuffed with spiced mashed potatoes, onions, carom seeds, served with butter slab.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Amritsari%20Aloo%20Pyaaz%20Kulcha%20(Rs.%20130)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 34: Laccha Paratha -->
+      <div class="dish-card breads bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Laccha_Paratha.JPG/960px-Laccha_Paratha.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Laccha Paratha" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹85</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Laccha Paratha</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crisp, multi-layered whole wheat bread cooked in tandoor with generous coatings of pure ghee.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Laccha%20Paratha%20(Rs.%2085)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 35: Roomali Roti -->
+      <div class="dish-card breads bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Rumali_Roti_-_Kerala.jpg/960px-Rumali_Roti_-_Kerala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Roomali Roti" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹60</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Roomali Roti</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Handkerchief-thin soft whole wheat bread skillfully hand-tossed and cooked upside down on inverted tawa.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Roomali%20Roti%20(Rs.%2060)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 36: Tandoori Butter Roti -->
+      <div class="dish-card breads bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/2020-05-08_19_34_28_Chapati_being_made_in_a_pan_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/960px-2020-05-08_19_34_28_Chapati_being_made_in_a_pan_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Tandoori Butter Roti" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹45</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Tandoori Butter Roti</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Wholesome whole wheat unleavened bread baked crisp in clay oven, finished with pure desi ghee.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Tandoori%20Butter%20Roti%20(Rs.%2045)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 37: Chilli Paneer Dry -->
+      <div class="dish-card chinese bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Chilly_Paneer_01.jpg/960px-Chilly_Paneer_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Chilli Paneer Dry" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹370</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Chilli Paneer Dry</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Golden fried paneer cubes tossed in spicy soy-garlic sauce with crunchy capsicum and green onions.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Chilli%20Paneer%20Dry%20(Rs.%20370)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 38: Crispy Chilli Chicken -->
+      <div class="dish-card chinese bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Chicken_Chilli.JPG/960px-Chicken_Chilli.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Crispy Chilli Chicken" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹410</span>
+            <span class="absolute top-3 left-3 bg-red-950/90 text-red-300 border-red-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-red-500"></span> Non-Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Crispy Chilli Chicken</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crispy batter-fried boneless chicken cubes tossed with fiery bird eye chillies, scallions, and dark soy.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Crispy%20Chilli%20Chicken%20(Rs.%20410)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 39: Classic Veg Hakka Noodles -->
+      <div class="dish-card chinese bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Homemade_Chow_mein_with_shrimps_and_meat_with_a_choy_and_Choung.jpg/960px-Homemade_Chow_mein_with_shrimps_and_meat_with_a_choy_and_Choung.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Classic Veg Hakka Noodles" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹310</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Classic Veg Hakka Noodles</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Wok-tossed noodles with shredded cabbage, bell peppers, carrots, spring onions in seasoned soy sauce.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Classic%20Veg%20Hakka%20Noodles%20(Rs.%20310)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 40: Veg Manchurian Gravy -->
+      <div class="dish-card chinese bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Chicken_Manchurian_%28Hyderabad_Style%29_%2811960049916%29.jpg/960px-Chicken_Manchurian_%28Hyderabad_Style%29_%2811960049916%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Veg Manchurian Gravy" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹340</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Veg Manchurian Gravy</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crispy minced vegetable balls simmered in a savory, tangy and spicy ginger-coriander dark gravy.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Veg%20Manchurian%20Gravy%20(Rs.%20340)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 41: Golden Vegetable Spring Rolls -->
+      <div class="dish-card chinese bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Spring_Rolls_%283357696061%29.jpg/960px-Spring_Rolls_%283357696061%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Golden Vegetable Spring Rolls" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹280</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Golden Vegetable Spring Rolls</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crisp crackling rolls stuffed with julienned vegetables and glass noodles, served with sweet chilli dip.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Golden%20Vegetable%20Spring%20Rolls%20(Rs.%20280)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 42: Schezwan Fried Rice -->
+      <div class="dish-card chinese bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Koh_Mak%2C_Thailand%2C_Fried_rice_with_seafood%2C_Thai_fried_rice.jpg/960px-Koh_Mak%2C_Thailand%2C_Fried_rice_with_seafood%2C_Thai_fried_rice.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Schezwan Fried Rice" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹320</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Schezwan Fried Rice</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Wok-charred rice tossed with seasonal vegetables in bold, homemade spicy Schezwan chili paste.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Schezwan%20Fried%20Rice%20(Rs.%20320)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 43: Royal Gulab Jamun (2 Pcs) -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Gulab-jamun-wallpaper-1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled" alt="Royal Gulab Jamun (2 Pcs)" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹160</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Royal Gulab Jamun (2 Pcs)</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Warm khoya dumplings steeped in green cardamom and rose scented sugar syrup, garnished with pistachio.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Royal%20Gulab%20Jamun%20%282%20Pcs%29%20(Rs.%20160)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 44: Shahi Tukda Nawabi -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Shahi_Tukda_-_Dessert_of_India.jpg/960px-Shahi_Tukda_-_Dessert_of_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail" alt="Shahi Tukda Nawabi" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹190</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Shahi Tukda Nawabi</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Ghee-crisped bread soaked in fragrant saffron syrup, smothered with thick rabdi, silver vark & nuts.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Shahi%20Tukda%20Nawabi%20(Rs.%20190)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 45: Kesar Pista Kheer -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Kheer.jpg/960px-Kheer.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Kesar Pista Kheer" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹170</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Kesar Pista Kheer</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Slow simmered royal basmati rice cooked in condensed milk, infused with saffron strands and pistachios.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Kesar%20Pista%20Kheer%20(Rs.%20170)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 46: Bengali Rasgulla (2 Pcs) -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Rasgulla.jpg/960px-Rasgulla.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Bengali Rasgulla (2 Pcs)" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹150</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Bengali Rasgulla (2 Pcs)</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Spongy and delicate chenna balls simmered in light fragrant sugar syrup, served chilled.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Bengali%20Rasgulla%20%282%20Pcs%29%20(Rs.%20150)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 47: Kesaria Jalebi with Rabdi -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Basavanagudi_Kadalekai_Parishe_%282025%29_Bangalore_%2886%29.jpg/960px-Basavanagudi_Kadalekai_Parishe_%282025%29_Bangalore_%2886%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Kesaria Jalebi with Rabdi" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹190</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Kesaria Jalebi with Rabdi</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Crispy spiral saffron jalebis served piping hot alongside rich, creamy slow-cooked malai rabdi.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Kesaria%20Jalebi%20with%20Rabdi%20(Rs.%20190)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 48: Royal Falooda Kulfi -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Faluda.JPG/960px-Faluda.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Royal Falooda Kulfi" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹210</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Royal Falooda Kulfi</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Creamy malai kulfi slice served with vermicelli noodles, sweet basil seeds, rose syrup, and dry fruits.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Royal%20Falooda%20Kulfi%20(Rs.%20210)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 49: Punjabi Sweet Lassi -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Salt_lassi.jpg/960px-Salt_lassi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Punjabi Sweet Lassi" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹140</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Punjabi Sweet Lassi</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Traditional chilled churned thick curd beverage topped with fresh malai, slivered nuts, and cardamom.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Punjabi%20Sweet%20Lassi%20(Rs.%20140)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Order
+          </a>
+        </div>
+      </div>
+
+      <!-- Item 50: Fresh Mint Mojito -->
+      <div class="dish-card desserts bg-[#141418] rounded-2xl overflow-hidden border border-amber-500/20 hover:border-amber-400 transition group flex flex-col justify-between shadow-lg hover:shadow-amber-500/10">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/15-09-26-RalfR-WLC-0072.jpg/960px-15-09-26-RalfR-WLC-0072.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail" alt="Fresh Mint Mojito" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-400 font-bold px-3 py-1 rounded-full text-xs border border-amber-500/30">₹180</span>
+            <span class="absolute top-3 left-3 bg-emerald-950/90 text-emerald-300 border-emerald-500/40 font-semibold px-2 py-0.5 rounded text-[10px] flex items-center gap-1 border">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Veg
+            </span>
+          </div>
+          <div class="p-5">
+            <h3 class="font-royal text-lg font-bold text-white mb-1.5">Fresh Mint Mojito</h3>
+            <p class="text-gray-400 text-xs line-clamp-2 mb-3">Refreshing cooler muddled with fresh mint leaves, lime chunks, cane sugar, and sparkling soda.</p>
+          </div>
+        </div>
+        <div class="px-5 pb-5">
+          <a href="https://wa.me/919570151834?text=I%20want%20to%20order:%20Fresh%20Mint%20Mojito%20(Rs.%20180)" target="_blank" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500 text-amber-400 hover:text-black font-semibold text-xs transition flex items-center justify-center gap-2 border border-amber-500/30">
             <i class="fa-brands fa-whatsapp text-sm"></i> Order
           </a>
         </div>
@@ -1189,16 +1939,19 @@
     }, 4500);
 
     // Digital Menu Category Filtering
-    function filterMenu(category) {
+    function filterMenu(category, el) {
+      const targetBtn = el || (window.event ? (window.event.currentTarget || window.event.target) : null);
       const cards = document.querySelectorAll('.dish-card');
       const buttons = document.querySelectorAll('.menu-tab-btn');
 
-      buttons.forEach(btn => {
-        btn.classList.remove('bg-amber-500', 'text-black', 'shadow-lg');
-        btn.classList.add('bg-[#18181D]', 'text-gray-300');
-      });
-      event.target.classList.add('bg-amber-500', 'text-black', 'shadow-lg');
-      event.target.classList.remove('bg-[#18181D]', 'text-gray-300');
+      if (targetBtn && targetBtn.classList.contains('menu-tab-btn')) {
+        buttons.forEach(btn => {
+          btn.classList.remove('bg-amber-500', 'text-black', 'shadow-lg');
+          btn.classList.add('bg-[#18181D]', 'text-gray-300');
+        });
+        targetBtn.classList.add('bg-amber-500', 'text-black', 'shadow-lg');
+        targetBtn.classList.remove('bg-[#18181D]', 'text-gray-300');
+      }
 
       cards.forEach(card => {
         if (category === 'all' || card.classList.contains(category)) {
